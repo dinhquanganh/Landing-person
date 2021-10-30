@@ -1,0 +1,158 @@
+.header {
+	background: url(../image/header-background.png) no-repeat;
+	background-size: cover;
+	background-position: top center;
+	padding: 141px 0 0;
+
+	.container {
+		margin: 0 auto;
+	}
+
+	&__slogan {
+		max-width: 1469px;
+		position: relative;
+		width: 80%;
+		z-index: 2;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__main {
+		&--item {
+			width: 100%;
+		}
+
+		.-title {
+			display: flex;
+			margin: 30px 0 76px 0;
+			position: relative;
+
+			&__content {
+				display: flex;
+				flex-flow: column;
+				max-width: calc(100% - 45%);
+				position: relative;
+				width: max-content;
+				right: -10%;
+
+				&--position {
+					color: #ffffff;
+					font-style: italic;
+					font-weight: normal;
+					font-size: 16px;
+					line-height: 19px;
+				}
+
+				&--name {
+					color: #ffffff;
+					font-style: normal;
+					font-weight: bold;
+					font-size: 72px;
+					line-height: 84px;
+					margin: 40px 0 2px;
+				}
+
+				&--contact {
+					align-items: center;
+					display: flex;
+				}
+
+				&--hyperlink {
+					align-items: center;
+					display: flex;
+
+					.-link {
+						background: #ffffff3d;
+						border-radius: 30px;
+						margin-left: 12px;
+						padding: 8px 22px;
+
+						a {
+							color: #fff;
+							text-decoration: none;
+						}
+					}
+				}
+
+				&--icon {
+					margin-left: 12px;
+				}
+			}
+
+			&__image {
+				position: absolute;
+				right: -100px;
+				top: 50%;
+				transform: translateY(-60%);
+				z-index: 1;
+				width: 45%;
+				max-width: 657px;
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+
+		.-body {
+			align-items: center;
+			background: #fff;
+			border-radius: 30px 30px 0 0;
+			display: flex;
+			overflow: hidden;
+			padding: 75px 55px 40px;
+			position: relative;
+			z-index: 1;
+
+			&::before {
+				content: '';
+				background: url(../image/background-bio.png) no-repeat;
+				background-position: center;
+				background-size: cover;
+				height: 100%;
+				left: 0;
+				position: absolute;
+				top: 0;
+				width: 100%;
+				z-index: 2;
+			}
+
+			&__content {
+				background: rgba(155, 155, 155, 0.7);
+				border-radius: 50px;
+				color: #fff;
+				font-style: normal;
+				font-weight: normal;
+				max-width: 582px;
+				padding: 40px 37px 70px;
+				z-index: 3;
+
+				&--title {
+					font-size: 48px;
+					letter-spacing: 0.2px;
+					line-height: 55px;
+					margin-bottom: 40px;
+					text-align: center;
+
+					@include Responsive(MD) {
+						text-align: right;
+					}
+				}
+
+				p {
+					font-size: 16px;
+					line-height: 28px;
+					text-align: justify;
+				}
+			}
+
+			&__image {
+				z-index: 3;
+			}
+		}
+	}
+}

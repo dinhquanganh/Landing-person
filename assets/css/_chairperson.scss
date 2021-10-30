@@ -1,0 +1,72 @@
+.chairperson {
+	background: url(../image/background-section5.png) no-repeat center;
+	background-size: cover;
+	padding: 110px 0 55px;
+
+	.col {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&__main {
+		width: 40%;
+
+		&--item {
+			width: 100%;
+		}
+
+		.-title {
+			img {
+				width: 100%;
+			}
+		}
+
+		.-body {
+			margin-top: 53px;
+			padding: 53px 29px 80px;
+			position: relative;
+
+			&::before {
+				content: '';
+				backdrop-filter: blur(12.886px);
+				background: rgba(248, 248, 248, 0.2);
+				box-shadow: inset 37.9px -37.9px 37.9px rgba(188, 188, 188, 0.2),
+					inset -37.9px 37.9px 37.9px rgba(255, 255, 255, 0.2);
+				border-radius: 62px;
+				height: 100%;
+				left: 0;
+				opacity: 0.9;
+				position: absolute;
+				top: 0;
+				width: 100%;
+				z-index: 0;
+			}
+
+			&__unorder-list {
+				position: relative;
+				z-index: 1;
+
+				.-body__list-item {
+					display: flex;
+					list-style: none;
+
+					&:not(:first-child) {
+						margin-top: 9px;
+					}
+
+					p {
+						color: #4b4b4b;
+						font-style: normal;
+						font-weight: 500;
+						font-size: 16px;
+						height: max-content;
+						line-height: 19px;
+						margin-left: 14px;
+						text-align: justify;
+						margin-top: 10px;
+					}
+				}
+			}
+		}
+	}
+}
