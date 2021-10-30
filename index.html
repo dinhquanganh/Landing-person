@@ -333,11 +333,174 @@
 				</div>
 			</div>
 		</section>
-		<section class="about-meeyland__title">
+		<section class="about-meeyland -no-bgr">
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<div class="about-meeyland__title__main"></div>
+						<div class="about-meeyland__main">
+							<div class="about-meeyland__main--item -title">
+								<div class="-title__image">
+									<img
+										src="./assets/image/about-meeyland-title.png"
+										alt="Meey Land"
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="about-meeyland" class="about-meeyland">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="about-meeyland__main">
+							<ul class="about-meeyland__main--item -list">
+								<li class="-list--item active">Cơ sở hạ tầng</li>
+								<li class="-list--item">Văn phòng đại diện</li>
+								<li class="-list--item">Đội ngũ điều hành</li>
+								<li class="-list--item">Nhân sự</li>
+								<li class="-list--item">Khách hàng</li>
+							</ul>
+							<div class="about-meeyland__main--item -slide">
+								<div class="swiper -infrastructure">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<!-- Required swiper-lazy class and image source specified in data-src attribute -->
+											<img
+												data-src="./assets/image/co-so-ha-tang/a1.jpg"
+												class="swiper-lazy"
+											/>
+											<!-- Preloader image -->
+											<div
+												class="
+													swiper-lazy-preloader swiper-lazy-preloader-white
+												"
+											></div>
+										</div>
+										<div class="swiper-slide">
+											<!-- Required swiper-lazy class and image source specified in data-src attribute -->
+											<img
+												data-src="./assets/image/co-so-ha-tang/a2.jpg"
+												class="swiper-lazy"
+											/>
+											<!-- Preloader image -->
+											<div
+												class="
+													swiper-lazy-preloader swiper-lazy-preloader-white
+												"
+											></div>
+										</div>
+										<div class="swiper-slide">
+											<!-- Required swiper-lazy class and image source specified in data-src attribute -->
+											<img
+												data-src="./assets/image/co-so-ha-tang/a3.jpg"
+												class="swiper-lazy"
+											/>
+											<!-- Preloader image -->
+											<div
+												class="
+													swiper-lazy-preloader swiper-lazy-preloader-white
+												"
+											></div>
+										</div>
+										<div class="swiper-slide">
+											<!-- Required swiper-lazy class and image source specified in data-src attribute -->
+											<img
+												data-src="./assets/image/co-so-ha-tang/a4.HEIC"
+												class="swiper-lazy"
+											/>
+											<!-- Preloader image -->
+											<div
+												class="
+													swiper-lazy-preloader swiper-lazy-preloader-white
+												"
+											></div>
+										</div>
+										<div class="swiper-slide">
+											<!-- Required swiper-lazy class and image source specified in data-src attribute -->
+											<img
+												data-src="./assets/image/co-so-ha-tang/a5.jpg"
+												class="swiper-lazy"
+											/>
+											<!-- Preloader image -->
+											<div
+												class="
+													swiper-lazy-preloader swiper-lazy-preloader-white
+												"
+											></div>
+										</div>
+										<div class="swiper-slide">
+											<!-- Required swiper-lazy class and image source specified in data-src attribute -->
+											<img
+												data-src="./assets/image/co-so-ha-tang/a6.jpg"
+												class="swiper-lazy"
+											/>
+											<!-- Preloader image -->
+											<div
+												class="
+													swiper-lazy-preloader swiper-lazy-preloader-white
+												"
+											></div>
+										</div>
+										<div class="swiper-slide">
+											<!-- Required swiper-lazy class and image source specified in data-src attribute -->
+											<img
+												data-src="./assets/image/co-so-ha-tang/a7.jpg"
+												class="swiper-lazy"
+											/>
+											<!-- Preloader image -->
+											<div
+												class="
+													swiper-lazy-preloader swiper-lazy-preloader-white
+												"
+											></div>
+										</div>
+										<div class="swiper-slide">
+											<!-- Required swiper-lazy class and image source specified in data-src attribute -->
+											<img
+												data-src="./assets/image/co-so-ha-tang/a8.jpg"
+												class="swiper-lazy"
+											/>
+											<!-- Preloader image -->
+											<div
+												class="
+													swiper-lazy-preloader swiper-lazy-preloader-white
+												"
+											></div>
+										</div>
+										<div class="swiper-slide">
+											<!-- Required swiper-lazy class and image source specified in data-src attribute -->
+											<img
+												data-src="./assets/image/co-so-ha-tang/a9.jpg"
+												class="swiper-lazy"
+											/>
+											<!-- Preloader image -->
+											<div
+												class="
+													swiper-lazy-preloader swiper-lazy-preloader-white
+												"
+											></div>
+										</div>
+									</div>
+								</div>
+								<div class="-slide__navigation">
+									<div class="-slide__navigation--item -prev">
+										<img
+											src="./assets/icon/arrow-about-meeyland.png"
+											alt="Arrow"
+										/>
+									</div>
+									<div class="-slide__navigation--item -next">
+										<img
+											src="./assets/icon/arrow-about-meeyland.png"
+											alt="Arrow"
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -364,6 +527,15 @@
 					videoEcosystem.scrollIntoView(true);
 				});
 			}
+		</script>
+		<script>
+			let aboutMeeylandSwiper = new Swiper('.-infrastructure', {
+				lazy: true, // Enable lazy loading
+				navigation: {
+					nextEl: '.-next',
+					prevEl: '.-prev'
+				}
+			});
 		</script>
 	</body>
 </html>

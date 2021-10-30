@@ -1,0 +1,128 @@
+.about-meeyland {
+	background: url(../image/background-about-meeyland.png) no-repeat center;
+	background-size: cover;
+	padding: 85px 0 84px;
+
+	&.-no-bgr {
+		background: #fff;
+		padding: 71px 0 39px;
+	}
+
+	&__main {
+		display: flex;
+
+		&--item {
+			width: 100%;
+		}
+
+		.-title {
+			display: flex;
+			justify-content: center;
+
+			&__image {
+				max-width: 777px;
+				width: 50%;
+
+				img {
+					width: 100%;
+				}
+			}
+		}
+		.-list {
+			list-style: none;
+			width: 225px;
+
+			&--item {
+				align-items: center;
+				background: linear-gradient(272.88deg, #ceac6d 4.95%, #d0a452 93.62%);
+				box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.5);
+				border-radius: 50px;
+				display: flex;
+				color: #ffffff;
+				cursor: pointer;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 18px;
+				justify-content: center;
+				line-height: 21px;
+				padding: 15px 0;
+				width: 100%;
+
+				&:not(:first-child) {
+					margin-top: 43px;
+				}
+
+				&.active {
+					background: linear-gradient(272.88deg, #2a40cc 4.95%, #071f91 93.62%);
+				}
+			}
+		}
+
+		.-slide {
+			backdrop-filter: blur(20px);
+			background: rgba(255, 255, 255, 0.2);
+			border-radius: 50px;
+			box-shadow: inset 27.2667px -27.2667px 27.2667px rgba(194, 194, 194, 0.174),
+				inset -27.2667px 27.2667px 27.2667px rgba(255, 255, 255, 0.174);
+			padding: 30px 62px;
+			max-width: calc(100% - 225px - 120px);
+			margin-left: 120px;
+			position: relative;
+			width: max-content;
+
+			.swiper {
+				width: 605px;
+				height: 100%;
+
+				&-slide {
+					text-align: center;
+					font-size: 18px;
+					background: transparent;
+
+					img {
+						border-radius: 40px;
+						height: auto;
+						max-height: 100%;
+						max-width: 100%;
+						left: 50%;
+						position: absolute;
+						top: 50%;
+						transform: translate(-50%, -50%);
+						width: auto;
+					}
+				}
+			}
+
+			&__navigation {
+				display: flex;
+				justify-content: space-between;
+				left: 0;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 100%;
+
+				&--item {
+					cursor: pointer;
+					transform: translateX(28px);
+					width: 56px;
+					transition: all 0.3s linear;
+
+					img {
+						width: 100%;
+					}
+				}
+
+				.-prev {
+					transform: rotate(180deg) translateX(28px);
+				}
+
+				.swiper-button-disabled {
+					opacity: 0.35;
+					cursor: auto;
+					pointer-events: none;
+				}
+			}
+		}
+	}
+}

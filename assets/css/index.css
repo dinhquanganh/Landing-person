@@ -194,10 +194,11 @@ section .background-texture img {
 }
 
 .header__main .-title__image img {
-  width: 100%;
+  border-radius: 50%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
 }
 
 .header__main .-body {
@@ -737,4 +738,159 @@ section .background-texture img {
   margin-left: 14px;
   text-align: justify;
   margin-top: 10px;
+}
+
+.about-meeyland {
+  background: url(../image/background-about-meeyland.png) no-repeat center;
+  background-size: cover;
+  padding: 85px 0 84px;
+}
+
+.about-meeyland.-no-bgr {
+  background: #fff;
+  padding: 71px 0 39px;
+}
+
+.about-meeyland__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about-meeyland__main--item {
+  width: 100%;
+}
+
+.about-meeyland__main .-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about-meeyland__main .-title__image {
+  max-width: 777px;
+  width: 50%;
+}
+
+.about-meeyland__main .-title__image img {
+  width: 100%;
+}
+
+.about-meeyland__main .-list {
+  list-style: none;
+  width: 225px;
+}
+
+.about-meeyland__main .-list--item {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: linear-gradient(272.88deg, #ceac6d 4.95%, #d0a452 93.62%);
+  -webkit-box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.5);
+          box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.5);
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #ffffff;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 21px;
+  padding: 15px 0;
+  width: 100%;
+}
+
+.about-meeyland__main .-list--item:not(:first-child) {
+  margin-top: 43px;
+}
+
+.about-meeyland__main .-list--item.active {
+  background: linear-gradient(272.88deg, #2a40cc 4.95%, #071f91 93.62%);
+}
+
+.about-meeyland__main .-slide {
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  -webkit-box-shadow: inset 27.2667px -27.2667px 27.2667px rgba(194, 194, 194, 0.174), inset -27.2667px 27.2667px 27.2667px rgba(255, 255, 255, 0.174);
+          box-shadow: inset 27.2667px -27.2667px 27.2667px rgba(194, 194, 194, 0.174), inset -27.2667px 27.2667px 27.2667px rgba(255, 255, 255, 0.174);
+  padding: 30px 62px;
+  max-width: calc(100% - 225px - 120px);
+  margin-left: 120px;
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.about-meeyland__main .-slide .swiper {
+  width: 605px;
+  height: 100%;
+}
+
+.about-meeyland__main .-slide .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+}
+
+.about-meeyland__main .-slide .swiper-slide img {
+  border-radius: 40px;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: auto;
+}
+
+.about-meeyland__main .-slide__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+}
+
+.about-meeyland__main .-slide__navigation--item {
+  cursor: pointer;
+  -webkit-transform: translateX(28px);
+          transform: translateX(28px);
+  width: 56px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.about-meeyland__main .-slide__navigation--item img {
+  width: 100%;
+}
+
+.about-meeyland__main .-slide__navigation .-prev {
+  -webkit-transform: rotate(180deg) translateX(28px);
+          transform: rotate(180deg) translateX(28px);
+}
+
+.about-meeyland__main .-slide__navigation .swiper-button-disabled {
+  opacity: 0.35;
+  cursor: auto;
+  pointer-events: none;
 }
