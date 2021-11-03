@@ -604,7 +604,7 @@ footer .background-texture img {
 }
 
 .header__main .-body__content--title {
-  font-size: 48px;
+  font-size: 40px;
   letter-spacing: 0.2px;
   line-height: 55px;
   margin-bottom: 40px;
@@ -613,6 +613,7 @@ footer .background-texture img {
 
 @media only screen and (min-width: 992px) {
   .header__main .-body__content--title {
+    font-size: 48px;
     text-align: right;
   }
 }
@@ -791,7 +792,7 @@ footer .background-texture img {
   border-radius: 29.5px;
   color: #071f91;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   padding: 5px 65px 5px 16px;
   min-width: 85%;
   width: 100%;
@@ -807,6 +808,7 @@ footer .background-texture img {
 @media only screen and (min-width: 992px) {
   .info-ecosystem__main .-handle > p {
     padding: 20px 32px;
+    font-weight: 500;
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
@@ -1132,7 +1134,7 @@ footer .background-texture img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 5px 10px 5px 5px;
+  padding: 5px 25px 5px 5px;
   position: relative;
   width: 344px;
   max-width: 100%;
@@ -1235,11 +1237,18 @@ footer .background-texture img {
 .released-ecosystem__main .-body--item p {
   color: #071f91;
   font-family: 'Be Vietnam Pro', sans-serif;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 19px;
+  font-weight: 700;
   line-height: 25px;
   text-align: center;
-  width: calc(100% - 66px);
+  width: calc(100% - 56px);
+}
+
+@media only screen and (min-width: 992px) {
+  .released-ecosystem__main .-body--item p {
+    font-weight: bold;
+    font-size: 20px;
+  }
 }
 
 .chairperson {
@@ -1997,8 +2006,14 @@ footer .background-texture img {
 }
 
 .development-roadmap__main .-body--item .-body__image {
-  width: 100%;
+  width: 50%;
   height: 122px;
+}
+
+@media only screen and (min-width: 992px) {
+  .development-roadmap__main .-body--item .-body__image {
+    width: 100%;
+  }
 }
 
 .development-roadmap__main .-body--item .-body__image img {
@@ -2010,12 +2025,19 @@ footer .background-texture img {
 
 .development-roadmap__main .-body--item p {
   color: #000000;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: normal;
-  line-height: 24px;
+  line-height: 22px;
   margin: 27px 0 3px;
   text-align: center;
+}
+
+@media only screen and (min-width: 992px) {
+  .development-roadmap__main .-body--item p {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .development-roadmap__main .-body--item h3 {

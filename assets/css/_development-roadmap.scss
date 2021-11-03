@@ -191,8 +191,11 @@
 				// }
 
 				.-body__image {
-					width: 100%;
+					width: 50%;
 					height: 122px;
+					@include Responsive(LG) {
+						width: 100%;
+					}
 
 					img {
 						width: 100%;
@@ -203,12 +206,16 @@
 
 				p {
 					color: #000000;
-					font-size: 16px;
+					font-size: 14px;
 					font-style: normal;
 					font-weight: normal;
-					line-height: 24px;
+					line-height: 22px;
 					margin: 27px 0 3px;
 					text-align: center;
+					@include Responsive(LG) {
+						font-size: 16px;
+						line-height: 24px;
+					}
 				}
 
 				h3 {

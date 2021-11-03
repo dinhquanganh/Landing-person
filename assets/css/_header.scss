@@ -240,12 +240,13 @@
 				}
 
 				&--title {
-					font-size: 48px;
+					font-size: 40px;
 					letter-spacing: 0.2px;
 					line-height: 55px;
 					margin-bottom: 40px;
 					text-align: center;
 					@include Responsive(LG) {
+						font-size: 48px;
 						text-align: right;
 					}
 				}
