@@ -67,8 +67,12 @@
 					color: #ffffff;
 					font-style: italic;
 					font-weight: normal;
-					font-size: 15px;
+					font-size: 14px;
 					line-height: 18px;
+					@include Responsive(LG) {
+						font-size: 15px;
+						line-height: 18px;
+					}
 					@include Responsive(LG) {
 						font-size: 16px;
 						line-height: 19px;
@@ -79,7 +83,7 @@
 					color: #ffffff;
 					font-style: normal;
 					font-weight: bold;
-					font-size: 25px;
+					font-size: 23px;
 					line-height: 30px;
 					margin: 10px 0 5px;
 					@include Responsive(MD) {
@@ -131,11 +135,22 @@
 						background: #ffffff3d;
 						border-radius: 30px;
 						margin-left: 12px;
-						padding: 8px 22px;
-
+						padding: 4px 15px;
+						@include Responsive(MD) {
+							padding: 8px 22px;
+						}
 						a {
 							color: #fff;
 							text-decoration: none;
+
+							p {
+								font-size: 10px;
+								line-height: 16px;
+								@include Responsive(MD) {
+									font-size: 14px;
+									line-height: 16px;
+								}
+							}
 						}
 					}
 				}

@@ -357,8 +357,15 @@ footer .background-texture img {
   color: #ffffff;
   font-style: italic;
   font-weight: normal;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 18px;
+}
+
+@media only screen and (min-width: 992px) {
+  .header__main .-title__content--position {
+    font-size: 15px;
+    line-height: 18px;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -372,7 +379,7 @@ footer .background-texture img {
   color: #ffffff;
   font-style: normal;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 23px;
   line-height: 30px;
   margin: 10px 0 5px;
 }
@@ -460,12 +467,30 @@ footer .background-texture img {
   background: #ffffff3d;
   border-radius: 30px;
   margin-left: 12px;
-  padding: 8px 22px;
+  padding: 4px 15px;
+}
+
+@media only screen and (min-width: 768px) {
+  .header__main .-title__content--hyperlink .-link {
+    padding: 8px 22px;
+  }
 }
 
 .header__main .-title__content--hyperlink .-link a {
   color: #fff;
   text-decoration: none;
+}
+
+.header__main .-title__content--hyperlink .-link a p {
+  font-size: 10px;
+  line-height: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+  .header__main .-title__content--hyperlink .-link a p {
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 
 .header__main .-title__content--icon {
