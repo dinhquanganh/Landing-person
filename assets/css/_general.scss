@@ -46,12 +46,17 @@ $XXL: 1440px;
 
 body {
 	width: 100%;
-	// overflow-x: hidden;
+
+	&.active {
+		// padding-right: 17px;
+		overflow-y: hidden;
+	}
 }
 
-section {
+section,
+footer {
 	.container {
-		max-width: calc(#{100%} - 20px);
+		max-width: calc(#{100%} - 23px);
 		margin: 0 auto;
 		width: 100%;
 		@include Responsive(MD) {
@@ -66,6 +71,10 @@ section {
 		@include Responsive(XXL) {
 			max-width: $XXL - 40px;
 		}
+	}
+
+	.container-max {
+		width: 100%;
 	}
 
 	.background-texture {
@@ -86,9 +95,21 @@ section {
 	width: 100%;
 }
 
-.font {
+.-text {
 	&--right {
 		text-align: right;
+	}
+
+	&--center {
+		text-align: center;
+	}
+
+	&--left {
+		text-align: left;
+	}
+
+	&--justify {
+		text-align: justify;
 	}
 }
 
@@ -96,10 +117,99 @@ section {
 	position: absolute;
 }
 
---button {
+.--button {
 	cursor: pointer;
 }
 
---disable {
+.--disable {
 	user-select: none;
+}
+
+.--hidden {
+	display: none;
+}
+
+.contact,
+.header {
+	.-title {
+		display: flex;
+		margin: 30px 0 76px 0;
+		position: relative;
+
+		&__content {
+			display: flex;
+			flex-flow: column;
+			max-width: calc(100% - 45%);
+			position: relative;
+			width: max-content;
+			right: -10%;
+
+			&--position {
+				font-style: italic;
+				font-weight: normal;
+				font-size: 16px;
+				line-height: 19px;
+			}
+
+			&--name {
+				font-style: normal;
+				font-weight: bold;
+				font-size: 28px;
+				line-height: 33px;
+				margin: 30px 0 10px;
+				@include Responsive(LG) {
+					font-weight: bold;
+					font-size: 72px;
+					line-height: 84px;
+				}
+			}
+
+			&--contact {
+				align-items: center;
+				display: flex;
+			}
+
+			&--hyperlink {
+				align-items: center;
+				display: flex;
+
+				.-link {
+					background: #ffffff3d;
+					border-radius: 30px;
+					margin-left: 12px;
+					padding: 8px 22px;
+
+					a {
+						color: #fff;
+						text-decoration: none;
+					}
+				}
+			}
+
+			&--icon {
+				margin-left: 12px;
+			}
+		}
+	}
+}
+
+.hot {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	display: flex;
+	z-index: 100;
+	@include Responsive(MD) {
+		right: 50px;
+	}
+
+	&--item {
+		margin-left: 20.41px;
+		cursor: pointer;
+		width: 50px;
+
+		img {
+			width: 100%;
+		}
+	}
 }

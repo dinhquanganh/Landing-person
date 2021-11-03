@@ -1,18 +1,40 @@
 .about-meeyland {
 	background: url(../image/background-about-meeyland.png) no-repeat center;
 	background-size: cover;
-	padding: 85px 0 84px;
+	padding: 34px 0 37px;
+	// display: none;
+	@include Responsive(LG) {
+		padding: 85px 0 84px;
+	}
 
 	&.-no-bgr {
 		background: #fff;
-		padding: 71px 0 39px;
+		padding: 30px 0 16px;
+		@include Responsive(LG) {
+			padding: 71px 0 39px;
+		}
 	}
 
 	&__main {
+		width: 100%;
 		display: flex;
+		justify-content: center;
+		flex-flow: column-reverse;
+		@include Responsive(LG) {
+			flex-flow: row;
+		}
 
 		&--item {
 			width: 100%;
+
+			&.-list-order {
+				width: 100%;
+				overflow-x: scroll;
+				@include Responsive(LG) {
+					width: max-content;
+					overflow-x: auto;
+				}
+			}
 		}
 
 		.-title {
@@ -21,35 +43,55 @@
 
 			&__image {
 				max-width: 777px;
-				width: 50%;
+				width: 80%;
+				@include Responsive(LG) {
+					width: 50%;
+				}
 
 				img {
 					width: 100%;
 				}
 			}
 		}
+
 		.-list {
 			list-style: none;
-			width: 225px;
+			width: max-content;
+			height: max-content;
+			overflow-x: scroll;
+			display: flex;
+			@include Responsive(LG) {
+				display: list-item;
+				overflow-x: auto;
+				width: 225px;
+			}
 
 			&--item {
-				align-items: center;
 				background: linear-gradient(272.88deg, #ceac6d 4.95%, #d0a452 93.62%);
 				box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.5);
 				border-radius: 50px;
-				display: flex;
 				color: #ffffff;
 				cursor: pointer;
 				font-style: normal;
 				font-weight: normal;
-				font-size: 18px;
-				justify-content: center;
-				line-height: 21px;
-				padding: 15px 0;
-				width: 100%;
+				font-size: 16px;
+				line-height: 19px;
+				text-align: center;
+				padding: 10px 15px 11px;
+				width: max-content;
+				@include Responsive(LG) {
+					width: 100%;
+					padding: 15px 0;
+					font-size: 18px;
+				}
 
 				&:not(:first-child) {
-					margin-top: 43px;
+					margin-top: 0;
+					margin-left: 5px;
+					@include Responsive(LG) {
+						margin-top: 43px;
+						margin-left: 0;
+					}
 				}
 
 				&.active {
@@ -58,29 +100,76 @@
 			}
 		}
 
+		.-slide-box {
+			display: flex;
+			width: 100%;
+			margin-left: 0;
+			max-width: 100%;
+			flex-flow: column;
+			justify-content: space-between;
+			@include Responsive(LG) {
+				width: 50%;
+				max-width: calc(100% - 225px - 120px);
+				margin-left: 120px;
+			}
+		}
+
+		.-detail {
+			font-style: normal;
+			font-weight: bold;
+			font-size: 24px;
+			line-height: 30px;
+			text-align: center;
+			color: #000000;
+			display: none;
+			@include Responsive(LG) {
+				display: block;
+			}
+		}
+
 		.-slide {
-			backdrop-filter: blur(20px);
-			background: rgba(255, 255, 255, 0.2);
+			backdrop-filter: blur(0);
+			background: transparent;
 			border-radius: 50px;
-			box-shadow: inset 27.2667px -27.2667px 27.2667px rgba(194, 194, 194, 0.174),
-				inset -27.2667px 27.2667px 27.2667px rgba(255, 255, 255, 0.174);
-			padding: 30px 62px;
-			max-width: calc(100% - 225px - 120px);
-			margin-left: 120px;
+			box-shadow: transparent;
+			padding: 0;
+			max-width: 100%;
+			width: 100%;
 			position: relative;
-			width: max-content;
+			margin-bottom: 40px;
+			@include Responsive(LG) {
+				padding: 30px 0;
+				width: 100%;
+				backdrop-filter: blur(20px);
+				background: rgba(255, 255, 255, 0.2);
+				box-shadow: inset 27.2667px -27.2667px 27.2667px rgba(194, 194, 194, 0.174),
+					inset -27.2667px 27.2667px 27.2667px rgba(255, 255, 255, 0.174);
+				// width: max-content;
+				margin-bottom: 0;
+				height: 90%;
+			}
 
 			.swiper {
-				width: 605px;
-				height: 100%;
+				width: 100%;
+				max-width: 100%;
+				max-height: 368px;
+				height: 1000px;
+				@include Responsive(LG) {
+					height: 100%;
+					max-width: 605px;
+					max-height: none;
+				}
 
 				&-slide {
 					text-align: center;
 					font-size: 18px;
 					background: transparent;
+					display: flex;
+					align-items: center;
+					overflow: hidden;
 
 					img {
-						border-radius: 40px;
+						border-radius: 20px;
 						height: auto;
 						max-height: 100%;
 						max-width: 100%;
@@ -89,18 +178,43 @@
 						top: 50%;
 						transform: translate(-50%, -50%);
 						width: auto;
+						@include Responsive(LG) {
+							border-radius: 40px;
+						}
+
+						&.img-n {
+							max-height: 75%;
+							@include Responsive(LG) {
+								max-height: 100%;
+							}
+						}
+					}
+
+					.-nameSlide {
+						display: block;
+						position: absolute;
+						width: 100%;
+						bottom: 0;
+						font-size: 15px;
+						line-height: 18px;
+						@include Responsive(LG) {
+							display: none;
+						}
 					}
 				}
 			}
 
 			&__navigation {
-				display: flex;
+				display: none;
 				justify-content: space-between;
 				left: 0;
 				position: absolute;
 				top: 50%;
 				transform: translateY(-50%);
 				width: 100%;
+				@include Responsive(LG) {
+					display: flex;
+				}
 
 				&--item {
 					cursor: pointer;
@@ -117,11 +231,11 @@
 					transform: rotate(180deg) translateX(28px);
 				}
 
-				.swiper-button-disabled {
-					opacity: 0.35;
-					cursor: auto;
-					pointer-events: none;
-				}
+				// .swiper-button-disabled {
+				// 	opacity: 0.35;
+				// 	cursor: auto;
+				// 	pointer-events: none;
+				// }
 			}
 		}
 	}

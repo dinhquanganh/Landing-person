@@ -1,8 +1,12 @@
 .header {
-	background: url(../image/header-background.png) no-repeat;
+	background: url(../image/header-background-mb.png) no-repeat;
 	background-size: cover;
 	background-position: top center;
-	padding: 141px 0 0;
+	padding: 60px 0 0;
+	@include Responsive(LG) {
+		background: url(../image/header-background.png) no-repeat;
+		padding: 141px 0 0;
+	}
 
 	.container {
 		margin: 0 auto;
@@ -13,6 +17,10 @@
 		position: relative;
 		width: 80%;
 		z-index: 2;
+		display: none;
+		@include Responsive(LG) {
+			display: block;
+		}
 
 		img {
 			width: 100%;
@@ -26,42 +34,88 @@
 
 		.-title {
 			display: flex;
-			margin: 30px 0 76px 0;
+			margin: 0 0 50px;
 			position: relative;
+			flex-flow: row-reverse;
+			justify-content: start;
+			align-items: center;
+			@include Responsive(LG) {
+				margin: 30px 0 76px;
+				flex-flow: row;
+			}
 
 			&__content {
 				display: flex;
 				flex-flow: column;
-				max-width: calc(100% - 45%);
-				position: relative;
+				max-width: none;
 				width: max-content;
-				right: -10%;
+				position: static;
+				margin-left: 19px;
+				@include Responsive(LG) {
+					position: relative;
+					max-width: calc(100% - 450px);
+					right: 0;
+				}
+				@include Responsive(XL) {
+					max-width: calc(100% - 660px);
+				}
+				@include Responsive(XXL) {
+					right: -10%;
+				}
 
 				&--position {
 					color: #ffffff;
 					font-style: italic;
 					font-weight: normal;
-					font-size: 16px;
-					line-height: 19px;
 				}
 
 				&--name {
 					color: #ffffff;
 					font-style: normal;
 					font-weight: bold;
-					font-size: 72px;
-					line-height: 84px;
-					margin: 40px 0 2px;
+					font-size: 28px;
+					line-height: 33px;
+					margin: 10px 0 5px;
+					@include Responsive(LG) {
+						margin: 0;
+						font-size: 45px;
+						line-height: 84px;
+					}
+					@include Responsive(XL) {
+						margin: 40px 0 2px;
+						font-size: 72px;
+						line-height: 84px;
+					}
 				}
 
 				&--contact {
-					align-items: center;
 					display: flex;
+					flex-flow: column;
+					align-items: flex-start;
+					@include Responsive(LG) {
+						flex-flow: row wrap;
+						align-items: center;
+					}
 				}
 
 				&--hyperlink {
 					align-items: center;
 					display: flex;
+
+					&:not(:first-child) {
+						margin-top: 10px;
+						@include Responsive(LG) {
+							margin-top: 0;
+						}
+					}
+
+					&:first-child,
+					&:nth-child(2) {
+						display: none;
+						@include Responsive(LG) {
+							display: flex;
+						}
+					}
 
 					.-link {
 						background: #ffffff3d;
@@ -77,23 +131,52 @@
 				}
 
 				&--icon {
-					margin-left: 12px;
+					margin-left: 0;
+					@include Responsive(LG) {
+						margin-left: 12px;
+					}
+				}
+
+				.-phone,
+				.-mail {
+					width: 24px;
+					@include Responsive(LG) {
+						width: auto;
+
+						img {
+							width: auto;
+						}
+					}
+
+					img {
+						width: 100%;
+					}
 				}
 			}
 
 			&__image {
-				position: absolute;
-				right: -100px;
-				top: 50%;
-				transform: translateY(-60%);
-				z-index: 1;
-				width: 45%;
-				max-width: 657px;
-
+				position: static;
+				height: 160px;
+				width: 160px;
+				border-radius: 50%;
+				@include Responsive(LG) {
+					position: absolute;
+					z-index: 1;
+					transform: translateY(-60%);
+					right: -10px;
+					top: 50%;
+					width: 450px;
+					height: 450px;
+				}
+				@include Responsive(XL) {
+					width: 600px;
+					right: -30px;
+					height: 600px;
+				}
 				img {
-					border-radius: 50%;
 					height: 100%;
 					object-fit: cover;
+					object-fit: contain;
 					width: 100%;
 				}
 			}
@@ -102,12 +185,22 @@
 		.-body {
 			align-items: center;
 			background: #fff;
-			border-radius: 30px 30px 0 0;
+			border-radius: 20px;
 			display: flex;
+			flex-flow: column-reverse;
+			padding: 0px 16px 40px;
 			overflow: hidden;
-			padding: 75px 55px 40px;
 			position: relative;
 			z-index: 1;
+			@include Responsive(MD) {
+				padding: 0px 55px 40px;
+			}
+			@include Responsive(LG) {
+				flex-flow: row;
+				padding: 75px 55px 40px;
+				border-radius: 50px;
+				border-radius: 30px 30px 0 0;
+			}
 
 			&::before {
 				content: '';
@@ -129,8 +222,12 @@
 				font-style: normal;
 				font-weight: normal;
 				max-width: 582px;
-				padding: 40px 37px 70px;
+				padding: 37px 23px 54px;
+
 				z-index: 3;
+				@include Responsive(LG) {
+					padding: 40px 37px 70px;
+				}
 
 				&--title {
 					font-size: 48px;
@@ -138,8 +235,7 @@
 					line-height: 55px;
 					margin-bottom: 40px;
 					text-align: center;
-
-					@include Responsive(MD) {
+					@include Responsive(LG) {
 						text-align: right;
 					}
 				}
@@ -153,6 +249,10 @@
 
 			&__image {
 				z-index: 3;
+
+				img {
+					width: 100%;
+				}
 			}
 		}
 	}

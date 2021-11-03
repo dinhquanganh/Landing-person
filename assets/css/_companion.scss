@@ -1,0 +1,54 @@
+.companion {
+	padding: 0;
+	@include Responsive(LG) {
+		padding: 67px 0 0;
+	}
+
+	&__main {
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+
+		&--item {
+			width: 100%;
+		}
+
+		.-head {
+			p {
+				font-style: normal;
+				font-weight: normal;
+				font-size: 18px;
+				line-height: 25px;
+				text-align: center;
+				color: #000000;
+
+				span {
+					font-weight: 900;
+					font-size: 18px;
+					line-height: 25px;
+					color: #d0a452;
+					display: inline-block;
+				}
+			}
+		}
+
+		.-btn {
+			width: max-content;
+			background: linear-gradient(272.88deg, #ceac6d 4.95%, #d0a452 93.62%);
+			box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.5);
+			border-radius: 50px;
+			padding: 9px 43px 10px;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 18px;
+			line-height: 21px;
+			color: #ffffff;
+			margin-top: 19px;
+			cursor: pointer;
+			@include Responsive(LG) {
+				margin-top: 32px;
+			}
+		}
+	}
+}

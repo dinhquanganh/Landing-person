@@ -1,0 +1,114 @@
+footer {
+	background: url(../image/background-footer-mb.png) no-repeat right top;
+	background-size: cover;
+	padding: 57px 0 51px;
+	@include Responsive(LG) {
+		padding: 76px 0 59px;
+		background: url(../image/background-footer.png) no-repeat right center;
+		background-size: cover;
+	}
+
+	.footer__main {
+		color: #fff;
+
+		&--item {
+			width: 100%;
+		}
+
+		.-head {
+			width: 275.75px;
+			@include Responsive(LG) {
+				width: 233px;
+			}
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.-body {
+			display: flex;
+			flex-flow: column;
+			margin: 27px 0 0;
+			@include Responsive(LG) {
+				margin: 40px 0 0;
+				flex-flow: row;
+			}
+
+			&--item {
+				min-width: 0;
+				// width: max-content;
+				max-width: 100%;
+				display: inline;
+				@include Responsive(LG) {
+					min-width: 455px;
+					// width: min-content;
+				}
+
+				&:not(:first-child) {
+					margin-left: 0;
+					margin-top: 28px;
+					@include Responsive(LG) {
+						margin-left: 5%;
+						margin-top: 0;
+					}
+					@include Responsive(XL) {
+						margin-left: 10%;
+						margin-top: 0;
+					}
+				}
+
+				&__title {
+					color: #ffffff;
+					border-bottom: 1px solid #ffffff;
+					font-family: 'Be Vietnam Pro', sans-serif;
+					font-size: 16px;
+					font-weight: bold;
+					line-height: 18.75px;
+					font-style: normal;
+					margin-bottom: 21px;
+					padding-bottom: 15px;
+					max-width: 100%;
+					width: max-content;
+					@include Responsive(LG) {
+						width: max-content;
+						font-weight: 600;
+						font-size: 20px;
+						margin-bottom: 43px;
+						line-height: 23px;
+					}
+				}
+
+				&__content {
+					width: 100%;
+
+					&:not(:first-child) {
+						margin-top: 0;
+						@include Responsive(LG) {
+							margin-top: 43px;
+						}
+					}
+				}
+			}
+		}
+
+		p {
+			align-self: center;
+			display: flex;
+			color: #ffffff;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: normal;
+			line-height: 30px;
+			@include Responsive(LG) {
+				font-size: 18px;
+			}
+
+			span {
+				align-self: center;
+				display: flex;
+				margin-right: 14px;
+			}
+		}
+	}
+}

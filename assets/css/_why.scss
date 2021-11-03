@@ -1,0 +1,304 @@
+.why {
+	padding: 34px 0 47px;
+	@include Responsive(LG) {
+		padding: 67px 0 107px;
+	}
+
+	&__main {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		&--item {
+			width: 100%;
+		}
+
+		.-head {
+			width: 100%;
+
+			@include Responsive(LG) {
+				width: 50%;
+				max-width: 100%;
+			}
+
+			&__title {
+				width: 100%;
+				cursor: pointer;
+
+				&--image {
+					width: 100%;
+
+					img {
+						width: 100%;
+					}
+				}
+
+				&--btn {
+					display: flex;
+					justify-content: center;
+					margin: 24px 0 20px;
+					@include Responsive(LG) {
+						display: none;
+						margin: 0;
+					}
+
+					a {
+						text-decoration: none;
+					}
+
+					.btn {
+						padding: 7px 15px 7px 9px;
+						display: flex;
+						align-items: center;
+						background: linear-gradient(
+							272.88deg,
+							#2a40cc 4.95%,
+							#071f91 93.62%
+						);
+						box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.5);
+						border-radius: 50px;
+						cursor: pointer;
+
+						&__icon {
+							width: 36px;
+							height: 36px;
+
+							img {
+								width: 100%;
+								height: 100%;
+								object-fit: contain;
+								object-position: center;
+							}
+						}
+
+						p {
+							font-family: ' Be Vietnam Pro', sans-serif;
+							font-style: normal;
+							font-weight: normal;
+							font-size: 18px;
+							line-height: 23px;
+							color: #ffffff;
+							margin-left: 2px;
+						}
+					}
+				}
+			}
+
+			&__description {
+				margin-bottom: 26px;
+				@include Responsive(LG) {
+					margin-bottom: 50px;
+				}
+
+				p {
+					font-style: italic;
+					font-weight: normal;
+					font-size: 16px;
+					line-height: 19px;
+					text-align: center;
+					color: #000000;
+					margin-top: 16px;
+					// white-space: nowrap;
+				}
+			}
+		}
+
+		.-body {
+			display: flex;
+			flex-flow: column;
+			align-items: center;
+			height: auto;
+			@include Responsive(LG) {
+				flex-flow: row wrap;
+				justify-content: center;
+				align-items: stretch;
+			}
+			@include Responsive(XL) {
+			}
+
+			&--item {
+				width: 100%;
+				max-width: 370px;
+				background: #d0a452;
+				border-radius: 50px 50px 100px;
+				height: auto;
+				position: relative;
+				z-index: 1;
+				margin-bottom: 10px;
+				@include Responsive(LG) {
+					width: 45%;
+				}
+				@include Responsive(XL) {
+					width: 25%;
+				}
+
+				&:not(:first-child) {
+					margin-left: 0;
+					margin-top: 26px;
+					@include Responsive(LG) {
+						margin-left: 35px;
+						margin-top: 0;
+					}
+				}
+
+				&::before {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					background: #eef1f9;
+					border-radius: 50px;
+					width: 100%;
+					height: 50%;
+					z-index: 2;
+				}
+
+				&__title {
+					font-style: normal;
+					font-weight: bold;
+					font-size: 18px;
+					line-height: 22px;
+					text-align: center;
+					color: #000000;
+					margin-top: 26px;
+					margin-bottom: 10px;
+					padding: 0 20px;
+				}
+
+				&__content {
+					background: #eef1f9;
+					border-radius: 50px;
+					padding: 40px 27px 44px;
+					position: relative;
+					z-index: 3;
+
+					&--item {
+						width: 100%;
+
+						&.-image {
+							img {
+								width: 100%;
+							}
+						}
+
+						p {
+							font-style: normal;
+							font-weight: normal;
+							font-size: 16px;
+							line-height: 25px;
+							text-align: justify;
+							color: #323232;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.why-opportunity {
+	padding: 100px 0 30px;
+
+	.container {
+		position: relative;
+	}
+
+	.row:first-child {
+		.col {
+			display: flex;
+			justify-content: end;
+		}
+	}
+
+	.row:last-child {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	&__main {
+		max-width: none;
+		width: 100%;
+		@include Responsive(LG) {
+			max-width: 645px;
+			width: 45%;
+		}
+
+		&--item {
+			width: 100%;
+		}
+
+		.-head {
+			&__title {
+				margin-bottom: 55px;
+
+				&--text {
+					font-style: normal;
+					font-weight: 900;
+					font-size: 38px;
+					line-height: 35px;
+					color: #000000;
+
+					@include Responsive(LG) {
+						font-size: 65px;
+						line-height: 45px;
+					}
+				}
+
+				&--image {
+					width: 100%;
+					margin: 6px 0 21px;
+					position: relative;
+
+					img {
+						width: 100%;
+						position: relative;
+						z-index: 2;
+					}
+
+					.question-mark {
+						position: absolute;
+						bottom: 35px;
+						left: 30px;
+						width: 25%;
+						max-width: 200px;
+						z-index: 1;
+						display: none;
+						@include Responsive(LG) {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+
+		.-body {
+			p {
+				font-style: normal;
+				font-weight: normal;
+				font-size: 16px;
+				line-height: 25px;
+				text-align: justify;
+				color: #323232;
+
+				&:not(:first-child) {
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+
+	&__background-texture {
+		width: 50%;
+		position: relative;
+		top: -37px;
+		@include Responsive(LG) {
+			max-width: 1055px;
+			width: 65%;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+}

@@ -1,5 +1,4 @@
 {
-  "dependencies": {
-    "fs": "^0.0.1-security"
-  }
+  "author": "dinhquanganh",
+  "version": "1"
 }

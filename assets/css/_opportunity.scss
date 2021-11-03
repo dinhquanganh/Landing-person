@@ -1,0 +1,68 @@
+.opportunity {
+	background: url(../image/business-opportunity-mb.png) no-repeat center;
+	background-size: cover;
+	padding: 54px 0 56px;
+	@include Responsive(LG) {
+		background: url(../image/business-opportunity.png) no-repeat center;
+		padding: 21px 0 111px;
+		background-size: cover;
+	}
+
+	&__main {
+		max-width: 100%;
+		width: 100%;
+		@include Responsive(LG) {
+			max-width: 752px;
+			width: 50%;
+		}
+
+		&--item {
+			width: 100%;
+		}
+
+		.-title {
+			margin-bottom: 35px;
+			display: flex;
+			justify-content: center;
+			position: relative;
+			z-index: 2;
+			@include Responsive(LG) {
+				justify-content: right;
+				margin-bottom: 0;
+			}
+
+			&__image {
+				width: 80%;
+				img {
+					width: 100%;
+				}
+			}
+		}
+
+		.-body {
+			backdrop-filter: blur(21.604px);
+			background: rgba(255, 255, 255, 0.8);
+			border-radius: 20px;
+			box-shadow: inset 32.7333px -32.7333px 32.7333px rgba(194, 194, 194, 0.074),
+				inset -32.7333px 32.7333px 32.7333px rgba(255, 255, 255, 0.074);
+			padding: 28px 27px 25px;
+			position: relative;
+			top: 0;
+			z-index: 1;
+			@include Responsive(LG) {
+				top: -10px;
+				padding: 44px 31px 55px;
+				border-radius: 50px;
+			}
+
+			p {
+				color: #000000;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: normal;
+				line-height: 35px;
+				text-align: justify;
+			}
+		}
+	}
+}

@@ -9,11 +9,40 @@
 			rel="stylesheet"
 			href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+			integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
 		<link rel="stylesheet" href="./assets/css/index.css" />
 	</head>
 	<body>
+		<div class="popup" id="popup">
+			<div class="popup__content">
+				<img
+					src="./assets/image/LỢI-ÍCH-KHI-THAM-GIA.jpg"
+					alt="LỢI-ÍCH-KHI-THAM-GIA"
+				/>
+				<div class="popup__close" onclick="togglePopup()">
+					<i class="fa-solid fa-xmark"></i>
+				</div>
+			</div>
+		</div>
+		<div class="hot">
+			<div class="hot--item">
+				<a href="">
+					<img src="./assets/icon/user-ref.png" alt="" />
+				</a>
+			</div>
+			<div class="hot--item">
+				<a href="#contact"
+					><img src="./assets/icon/contact-now.svg" alt=""
+				/></a>
+			</div>
+		</div>
 		<section id="header" class="header">
 			<div class="container">
 				<div class="row">
@@ -26,7 +55,7 @@
 				<div class="row">
 					<div class="col">
 						<div class="header__main">
-							<div class="header__main--item -title">
+							<div class="header__main--item -title -xcore">
 								<div class="-title__content">
 									<p class="-title__content--position">Trợ lý Chủ tịch HĐQT</p>
 									<p class="-title__content--name">TRẦN VĂN TÙNG</p>
@@ -87,24 +116,21 @@
 								<div class="-body__content">
 									<div class="-body__content--title">Lời tự sự</div>
 									<p>
-										Xin chào các bạn, hiện tôi đang làm việc trong lĩnh vực môi
-										giới BĐS được 5 năm.
+										Thị trường Bất động sản là 1 thị trường vô cùng tiềm năng
+										nhưng cũng ẩn chứa đầy thách thức. Đầu tiên phải nói đến là
+										tính thanh khoản. Chúng ta không lạ với những bất động sản,
+										có khi muốn thanh khoản, mà cả vài tháng chưa giao dịch
+										được, điều này gây ứ đọng dòng tiền, khiến cho các nhà đầu
+										tư e ngại trong việc lựa chọn. Bên cạnh đó, pháp lý cũng là
+										1 vấn đề nhức nhối, nhiều khi chỉ vì thiếu thông tin minh
+										bạch, một bất động sản có thể chung vài chủ, gây nên tình
+										trạng kiện tụng tranh chấp.
 										<br />
 										<br />
-										Tháng 11/2019, tôi được một người bạn đồng nghiệp giới thiệu
-										có 1 Start up về công nghệ chuyên biệt cho lĩnh vực bất động
-										sản. Là lĩnh vực của mình, nên tôi hào hứng tìm hiểu xem có
-										hỗ trợ được gì cho công việc của mình không, bởi cũng như
-										các đồng nghiệp, tôi khá khó khăn và tốn kém trong việc tìm
-										kiếm khách hàng tiềm năng, mà đôi khi có khách “nét” rồi lại
-										ko có nguồn hàng để khớp giao dịch. Từ đó đến nay, đồng hành
-										trải nghiệm và sử dụng sản phẩm, lại chứng kiến Meey Land đã
-										liên tục cung cấp những sản phẩm đắc lực giải quyết các bài
-										toán khó trong thị trường, tôi càng thêm yêu và tin tưởng
-										vào sự phát triển của doanh nghiệp.
-										<br />
-										<br />
-										Hãy cùng tôi tìm hiểu, Meey Land cụ thể là gì nhé?
+										Tôi hiểu rằng, nếu có 1 sản phẩm giải quyết được nhiều bài
+										toán khó cho xã hội, đặc biệt là thị trường vua như thị
+										trường bất động sản, sẽ vô cùng tiềm năng và mang về lơi
+										nhuận lớn. Meey Land ra đời để làm điều đó.
 									</p>
 								</div>
 								<div class="-body__image">
@@ -126,7 +152,7 @@
 								<div class="-meeyland-text">
 									<img src="./assets/image/meeyland-text.png" alt="Meey Land" />
 								</div>
-								<p class="font--right">được ra đời</p>
+								<p class="-text--right">được ra đời</p>
 								<div class="-title__question">
 									<p>Hệ sinh thái Công nghệ Bất động sản là gì ?</p>
 								</div>
@@ -149,14 +175,22 @@
 							</div>
 							<div class="info-ecosystem__main--item -handle">
 								<p>Meey Land ra đời dẫn đầu cho một kỷ nguyên mới</p>
-								<div class="btn btn__play-video">
+								<div
+									class="btn btn__play-video"
+									data-src="https://www.youtube.com/embed/Wh4UeELDmUI"
+									data-title="Meey Land ra đời dẫn đầu cho một kỷ nguyên mới"
+								>
 									<img src="./assets/icon/play-circle.svg" alt="play video" />
 									<p>Play Video</p>
 								</div>
 							</div>
 							<div class="info-ecosystem__main--item -handle">
 								<p>Meey Land giúp giải quyết “nỗi đau” thị trường BĐS</p>
-								<div class="btn btn__play-video" id="">
+								<div
+									class="btn btn__play-video"
+									data-src="https://www.youtube.com/embed/6C993JCNjIU"
+									data-title="Meey Land giúp giải quyết “nỗi đau” thị trường BĐS"
+								>
 									<img src="./assets/icon/play-circle.svg" alt="play video" />
 									<p>Play Video</p>
 								</div>
@@ -174,7 +208,7 @@
 							<iframe
 								class="video-ecosystem__main__iframe"
 								src="https://www.youtube.com/embed/Wh4UeELDmUI"
-								title="YouTube video player"
+								title="Meey Land ra đời dẫn đầu cho một kỷ nguyên mới"
 								frameborder="0"
 								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 								allowfullscreen
@@ -191,14 +225,18 @@
 					<div class="col">
 						<div class="product-ecosystem__main">
 							<div class="product-ecosystem__main--item -title">
+								<h2 class="--hidden">Hệ sinh thái 26 sản phẩm công nghệ</h2>
 								<div class="-title--item">
-									<div class="-title--item__image">
-										<img src="./assets/image/26.svg" alt="26" />
-									</div>
-									<p class="absolute">Hệ sinh thái</p>
-								</div>
-								<div class="-title--item">
-									<p>sản phẩm công nghệ</p>
+									<picture>
+										<source
+											srcset="./assets/image/he-sinh-thai-26-sp.svg"
+											media="(min-width: 992px)"
+										/>
+										<img
+											alt="he-sinh-thai-26-sp"
+											srcset="./assets/image/he-sinh-thai-26-sp-mb.svg"
+										/>
+									</picture>
 								</div>
 								<div class="-title--item">
 									<p>CHUYÊN BIỆT CHO LĨNH VỰC BẤT ĐỘNG SẢN</p>
@@ -230,36 +268,693 @@
 										<img src="./assets/icon/icon-meeyland.svg" alt="icon" />
 									</div>
 									<p>Website meeyland.com</p>
+									<div class="tt-detail">
+										<div class="tt-detail__image">
+											<img
+												src="./assets/icon/icon-meeyland.svg"
+												alt="Meey Land"
+											/>
+
+											<div class="ttdetail__svg">
+												<svg
+													width="96"
+													height="113"
+													viewBox="0 0 96 113"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<g id="Group 31">
+														<circle
+															id="Ellipse 4"
+															opacity="0.1"
+															cx="30"
+															cy="50"
+															r="30"
+															fill="#071F91"
+														/>
+														<g
+															id="Rectangle 111"
+															filter="url(#filter0_d_862:1924)"
+														>
+															<rect
+																x="32"
+																y="49"
+																width="48"
+																height="48"
+																rx="5"
+																fill="white"
+															/>
+														</g>
+														<rect
+															id="Rectangle 112"
+															x="56"
+															width="35"
+															height="35"
+															rx="5"
+															fill="#E4E4E4"
+														/>
+														<circle
+															id="Ellipse 5"
+															cx="16"
+															cy="78"
+															r="4"
+															fill="#071F91"
+														/>
+														<circle
+															id="Ellipse 6"
+															cx="36"
+															cy="21"
+															r="4"
+															fill="#936828"
+														/>
+													</g>
+													<defs>
+														<filter
+															id="filter0_d_862:1924"
+															x="32"
+															y="49"
+															width="64"
+															height="64"
+															filterUnits="userSpaceOnUse"
+															color-interpolation-filters="sRGB"
+														>
+															<feFlood
+																flood-opacity="0"
+																result="BackgroundImageFix"
+															/>
+															<feColorMatrix
+																in="SourceAlpha"
+																type="matrix"
+																values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+																result="hardAlpha"
+															/>
+															<feOffset dx="8" dy="8" />
+															<feGaussianBlur stdDeviation="4" />
+															<feComposite in2="hardAlpha" operator="out" />
+															<feColorMatrix
+																type="matrix"
+																values="0 0 0 0 0.027451 0 0 0 0 0.121569 0 0 0 0 0.568627 0 0 0 0.2 0"
+															/>
+															<feBlend
+																mode="normal"
+																in2="BackgroundImageFix"
+																result="effect1_dropShadow_862:1924"
+															/>
+															<feBlend
+																mode="normal"
+																in="SourceGraphic"
+																in2="effect1_dropShadow_862:1924"
+																result="shape"
+															/>
+														</filter>
+													</defs>
+												</svg>
+											</div>
+										</div>
+										<div class="tt-detail__title">Website meeyland.com</div>
+										<div class="tt-detail__content">
+											Là sàn giao dịch bất động sản hiện đại hướng đến giải
+											quyết bài toán kết nối giữa người mua và người bán bất
+											động sản một cách nhanh chóng nhất, trực quan nhất, thuận
+											tiện nhất và bảo mật nhất.
+										</div>
+									</div>
 								</div>
 								<div class="-body--item">
 									<div class="-body--item__icon">
 										<img src="./assets/icon/icon-meeyland.svg" alt="icon" />
 									</div>
 									<p>Meey Land APP</p>
+									<div class="tt-detail">
+										<div class="tt-detail__image">
+											<img
+												src="./assets/icon/icon-meeyland.svg"
+												alt="Meey Land"
+											/>
+
+											<div class="ttdetail__svg">
+												<svg
+													width="96"
+													height="113"
+													viewBox="0 0 96 113"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<g id="Group 31">
+														<circle
+															id="Ellipse 4"
+															opacity="0.1"
+															cx="30"
+															cy="50"
+															r="30"
+															fill="#071F91"
+														/>
+														<g
+															id="Rectangle 111"
+															filter="url(#filter0_d_862:1924)"
+														>
+															<rect
+																x="32"
+																y="49"
+																width="48"
+																height="48"
+																rx="5"
+																fill="white"
+															/>
+														</g>
+														<rect
+															id="Rectangle 112"
+															x="56"
+															width="35"
+															height="35"
+															rx="5"
+															fill="#E4E4E4"
+														/>
+														<circle
+															id="Ellipse 5"
+															cx="16"
+															cy="78"
+															r="4"
+															fill="#071F91"
+														/>
+														<circle
+															id="Ellipse 6"
+															cx="36"
+															cy="21"
+															r="4"
+															fill="#936828"
+														/>
+													</g>
+													<defs>
+														<filter
+															id="filter0_d_862:1924"
+															x="32"
+															y="49"
+															width="64"
+															height="64"
+															filterUnits="userSpaceOnUse"
+															color-interpolation-filters="sRGB"
+														>
+															<feFlood
+																flood-opacity="0"
+																result="BackgroundImageFix"
+															/>
+															<feColorMatrix
+																in="SourceAlpha"
+																type="matrix"
+																values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+																result="hardAlpha"
+															/>
+															<feOffset dx="8" dy="8" />
+															<feGaussianBlur stdDeviation="4" />
+															<feComposite in2="hardAlpha" operator="out" />
+															<feColorMatrix
+																type="matrix"
+																values="0 0 0 0 0.027451 0 0 0 0 0.121569 0 0 0 0 0.568627 0 0 0 0.2 0"
+															/>
+															<feBlend
+																mode="normal"
+																in2="BackgroundImageFix"
+																result="effect1_dropShadow_862:1924"
+															/>
+															<feBlend
+																mode="normal"
+																in="SourceGraphic"
+																in2="effect1_dropShadow_862:1924"
+																result="shape"
+															/>
+														</filter>
+													</defs>
+												</svg>
+											</div>
+										</div>
+										<div class="tt-detail__title">Meey Land App</div>
+										<div class="tt-detail__content">
+											Là ứng dụng trên điện thoại, dùng để tìm kiếm bất động sản
+											chuyên sâu được xây dựng trên nền tảng công nghệ 4.0
+										</div>
+									</div>
 								</div>
 								<div class="-body--item">
 									<div class="-body--item__icon">
 										<img src="./assets/icon/icon-meeyads.svg" alt="icon" />
 									</div>
 									<p>Meey Ads</p>
+									<div class="tt-detail">
+										<div class="tt-detail__image">
+											<img
+												src="./assets/icon/icon-meeyads.svg"
+												alt="Meey Land"
+											/>
+
+											<div class="ttdetail__svg">
+												<svg
+													width="96"
+													height="113"
+													viewBox="0 0 96 113"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<g id="Group 31">
+														<circle
+															id="Ellipse 4"
+															opacity="0.1"
+															cx="30"
+															cy="50"
+															r="30"
+															fill="#071F91"
+														/>
+														<g
+															id="Rectangle 111"
+															filter="url(#filter0_d_862:1924)"
+														>
+															<rect
+																x="32"
+																y="49"
+																width="48"
+																height="48"
+																rx="5"
+																fill="white"
+															/>
+														</g>
+														<rect
+															id="Rectangle 112"
+															x="56"
+															width="35"
+															height="35"
+															rx="5"
+															fill="#E4E4E4"
+														/>
+														<circle
+															id="Ellipse 5"
+															cx="16"
+															cy="78"
+															r="4"
+															fill="#071F91"
+														/>
+														<circle
+															id="Ellipse 6"
+															cx="36"
+															cy="21"
+															r="4"
+															fill="#936828"
+														/>
+													</g>
+													<defs>
+														<filter
+															id="filter0_d_862:1924"
+															x="32"
+															y="49"
+															width="64"
+															height="64"
+															filterUnits="userSpaceOnUse"
+															color-interpolation-filters="sRGB"
+														>
+															<feFlood
+																flood-opacity="0"
+																result="BackgroundImageFix"
+															/>
+															<feColorMatrix
+																in="SourceAlpha"
+																type="matrix"
+																values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+																result="hardAlpha"
+															/>
+															<feOffset dx="8" dy="8" />
+															<feGaussianBlur stdDeviation="4" />
+															<feComposite in2="hardAlpha" operator="out" />
+															<feColorMatrix
+																type="matrix"
+																values="0 0 0 0 0.027451 0 0 0 0 0.121569 0 0 0 0 0.568627 0 0 0 0.2 0"
+															/>
+															<feBlend
+																mode="normal"
+																in2="BackgroundImageFix"
+																result="effect1_dropShadow_862:1924"
+															/>
+															<feBlend
+																mode="normal"
+																in="SourceGraphic"
+																in2="effect1_dropShadow_862:1924"
+																result="shape"
+															/>
+														</filter>
+													</defs>
+												</svg>
+											</div>
+										</div>
+										<div class="tt-detail__title">Meey Ads</div>
+										<div class="tt-detail__content">
+											Là sản phẩm hỗ trợ chạy quảng cáo cho lĩnh vực bất động
+											sản trên nền tảng Facebook Ads và Google Ads
+										</div>
+									</div>
 								</div>
 								<div class="-body--item">
 									<div class="-body--item__icon">
 										<img src="./assets/icon/icon-meeymap.svg" alt="icon" />
 									</div>
 									<p>Meey Map</p>
+									<div class="tt-detail">
+										<div class="tt-detail__image">
+											<img
+												src="./assets/icon/icon-meeymap.svg"
+												alt="Meey Land"
+											/>
+
+											<div class="ttdetail__svg">
+												<svg
+													width="96"
+													height="113"
+													viewBox="0 0 96 113"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<g id="Group 31">
+														<circle
+															id="Ellipse 4"
+															opacity="0.1"
+															cx="30"
+															cy="50"
+															r="30"
+															fill="#071F91"
+														/>
+														<g
+															id="Rectangle 111"
+															filter="url(#filter0_d_862:1924)"
+														>
+															<rect
+																x="32"
+																y="49"
+																width="48"
+																height="48"
+																rx="5"
+																fill="white"
+															/>
+														</g>
+														<rect
+															id="Rectangle 112"
+															x="56"
+															width="35"
+															height="35"
+															rx="5"
+															fill="#E4E4E4"
+														/>
+														<circle
+															id="Ellipse 5"
+															cx="16"
+															cy="78"
+															r="4"
+															fill="#071F91"
+														/>
+														<circle
+															id="Ellipse 6"
+															cx="36"
+															cy="21"
+															r="4"
+															fill="#936828"
+														/>
+													</g>
+													<defs>
+														<filter
+															id="filter0_d_862:1924"
+															x="32"
+															y="49"
+															width="64"
+															height="64"
+															filterUnits="userSpaceOnUse"
+															color-interpolation-filters="sRGB"
+														>
+															<feFlood
+																flood-opacity="0"
+																result="BackgroundImageFix"
+															/>
+															<feColorMatrix
+																in="SourceAlpha"
+																type="matrix"
+																values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+																result="hardAlpha"
+															/>
+															<feOffset dx="8" dy="8" />
+															<feGaussianBlur stdDeviation="4" />
+															<feComposite in2="hardAlpha" operator="out" />
+															<feColorMatrix
+																type="matrix"
+																values="0 0 0 0 0.027451 0 0 0 0 0.121569 0 0 0 0 0.568627 0 0 0 0.2 0"
+															/>
+															<feBlend
+																mode="normal"
+																in2="BackgroundImageFix"
+																result="effect1_dropShadow_862:1924"
+															/>
+															<feBlend
+																mode="normal"
+																in="SourceGraphic"
+																in2="effect1_dropShadow_862:1924"
+																result="shape"
+															/>
+														</filter>
+													</defs>
+												</svg>
+											</div>
+										</div>
+										<div class="tt-detail__title">Meey Map</div>
+										<div class="tt-detail__content">
+											Là nền tảng bản đồ tra cứu quy hoạch bất động sản đảm bảo
+											các yếu tố chi tiết, trực quan, đầy đủ, cập nhật và hiện
+											đại
+										</div>
+									</div>
 								</div>
 								<div class="-body--item">
 									<div class="-body--item__icon">
 										<img src="./assets/icon/icon-meeypage.svg" alt="icon" />
 									</div>
 									<p>Meey Page</p>
+									<div class="tt-detail">
+										<div class="tt-detail__image">
+											<img
+												src="./assets/icon/icon-meeypage.svg"
+												alt="Meey Land"
+											/>
+
+											<div class="ttdetail__svg">
+												<svg
+													width="96"
+													height="113"
+													viewBox="0 0 96 113"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<g id="Group 31">
+														<circle
+															id="Ellipse 4"
+															opacity="0.1"
+															cx="30"
+															cy="50"
+															r="30"
+															fill="#071F91"
+														/>
+														<g
+															id="Rectangle 111"
+															filter="url(#filter0_d_862:1924)"
+														>
+															<rect
+																x="32"
+																y="49"
+																width="48"
+																height="48"
+																rx="5"
+																fill="white"
+															/>
+														</g>
+														<rect
+															id="Rectangle 112"
+															x="56"
+															width="35"
+															height="35"
+															rx="5"
+															fill="#E4E4E4"
+														/>
+														<circle
+															id="Ellipse 5"
+															cx="16"
+															cy="78"
+															r="4"
+															fill="#071F91"
+														/>
+														<circle
+															id="Ellipse 6"
+															cx="36"
+															cy="21"
+															r="4"
+															fill="#936828"
+														/>
+													</g>
+													<defs>
+														<filter
+															id="filter0_d_862:1924"
+															x="32"
+															y="49"
+															width="64"
+															height="64"
+															filterUnits="userSpaceOnUse"
+															color-interpolation-filters="sRGB"
+														>
+															<feFlood
+																flood-opacity="0"
+																result="BackgroundImageFix"
+															/>
+															<feColorMatrix
+																in="SourceAlpha"
+																type="matrix"
+																values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+																result="hardAlpha"
+															/>
+															<feOffset dx="8" dy="8" />
+															<feGaussianBlur stdDeviation="4" />
+															<feComposite in2="hardAlpha" operator="out" />
+															<feColorMatrix
+																type="matrix"
+																values="0 0 0 0 0.027451 0 0 0 0 0.121569 0 0 0 0 0.568627 0 0 0 0.2 0"
+															/>
+															<feBlend
+																mode="normal"
+																in2="BackgroundImageFix"
+																result="effect1_dropShadow_862:1924"
+															/>
+															<feBlend
+																mode="normal"
+																in="SourceGraphic"
+																in2="effect1_dropShadow_862:1924"
+																result="shape"
+															/>
+														</filter>
+													</defs>
+												</svg>
+											</div>
+										</div>
+										<div class="tt-detail__title">Meey Page</div>
+										<div class="tt-detail__content">
+											Là nền tảng xây dựng Landingpage với tên miền, hosting
+											thuộc sở hữu của Meeyland, dành riêng cho bất động sản
+										</div>
+									</div>
 								</div>
 								<div class="-body--item">
 									<div class="-body--item__icon">
 										<img src="./assets/icon/icon-meeycrm.svg" alt="icon" />
 									</div>
 									<p>Meey CRM</p>
+									<div class="tt-detail">
+										<div class="tt-detail__image">
+											<img
+												src="./assets/icon/icon-meeycrm.svg"
+												alt="Meey Land"
+											/>
+
+											<div class="ttdetail__svg">
+												<svg
+													width="96"
+													height="113"
+													viewBox="0 0 96 113"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<g id="Group 31">
+														<circle
+															id="Ellipse 4"
+															opacity="0.1"
+															cx="30"
+															cy="50"
+															r="30"
+															fill="#071F91"
+														/>
+														<g
+															id="Rectangle 111"
+															filter="url(#filter0_d_862:1924)"
+														>
+															<rect
+																x="32"
+																y="49"
+																width="48"
+																height="48"
+																rx="5"
+																fill="white"
+															/>
+														</g>
+														<rect
+															id="Rectangle 112"
+															x="56"
+															width="35"
+															height="35"
+															rx="5"
+															fill="#E4E4E4"
+														/>
+														<circle
+															id="Ellipse 5"
+															cx="16"
+															cy="78"
+															r="4"
+															fill="#071F91"
+														/>
+														<circle
+															id="Ellipse 6"
+															cx="36"
+															cy="21"
+															r="4"
+															fill="#936828"
+														/>
+													</g>
+													<defs>
+														<filter
+															id="filter0_d_862:1924"
+															x="32"
+															y="49"
+															width="64"
+															height="64"
+															filterUnits="userSpaceOnUse"
+															color-interpolation-filters="sRGB"
+														>
+															<feFlood
+																flood-opacity="0"
+																result="BackgroundImageFix"
+															/>
+															<feColorMatrix
+																in="SourceAlpha"
+																type="matrix"
+																values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+																result="hardAlpha"
+															/>
+															<feOffset dx="8" dy="8" />
+															<feGaussianBlur stdDeviation="4" />
+															<feComposite in2="hardAlpha" operator="out" />
+															<feColorMatrix
+																type="matrix"
+																values="0 0 0 0 0.027451 0 0 0 0 0.121569 0 0 0 0 0.568627 0 0 0 0.2 0"
+															/>
+															<feBlend
+																mode="normal"
+																in2="BackgroundImageFix"
+																result="effect1_dropShadow_862:1924"
+															/>
+															<feBlend
+																mode="normal"
+																in="SourceGraphic"
+																in2="effect1_dropShadow_862:1924"
+																result="shape"
+															/>
+														</filter>
+													</defs>
+												</svg>
+											</div>
+										</div>
+										<div class="tt-detail__title">Meey CRM</div>
+										<div class="tt-detail__content">
+											Là ứng dụng quả lý khách hạng và nguồn hàng dành riêng cho
+											nhà môi giới bất động sản Viêt Nam.
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -268,6 +963,23 @@
 			</div>
 		</section>
 		<section id="chairperson" class="chairperson">
+			<div class="container-full">
+				<div class="row">
+					<div class="col">
+						<div class="chairperson__main">
+							<!-- <div class="chairperson__main--item -image">
+								<img
+									src="./assets/image/hoangmaichung-text.png"
+									alt="Hoang Mai Chung Chairperson"
+								/>
+							</div> -->
+							<div class="chairperson__main--item -image">
+								<img src="./assets/image/background-section5-mb.png" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="container">
 				<div class="row">
 					<div class="col">
@@ -356,147 +1068,721 @@
 				<div class="row">
 					<div class="col">
 						<div class="about-meeyland__main">
-							<ul class="about-meeyland__main--item -list">
-								<li class="-list--item active">Cơ sở hạ tầng</li>
-								<li class="-list--item">Văn phòng đại diện</li>
-								<li class="-list--item">Đội ngũ điều hành</li>
-								<li class="-list--item">Nhân sự</li>
-								<li class="-list--item">Khách hàng</li>
-							</ul>
-							<div class="about-meeyland__main--item -slide">
-								<div class="swiper -infrastructure">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<!-- Required swiper-lazy class and image source specified in data-src attribute -->
+							<div class="about-meeyland__main--item -list-order">
+								<ul class="-list">
+									<li
+										class="-list--item active"
+										data-name="co-so-ha-tang"
+										data-length="16"
+									>
+										Cơ sở hạ tầng
+									</li>
+									<li
+										class="-list--item"
+										data-name="van-phong-dai-dien"
+										data-length="22"
+									>
+										Văn phòng đại diện
+									</li>
+									<li
+										class="-list--item"
+										data-name="doi-ngu-dieu-hanh"
+										data-length="5"
+									>
+										Đội ngũ điều hành
+									</li>
+									<li class="-list--item" data-name="nhan-su" data-length="9">
+										Nhân sự
+									</li>
+									<li
+										class="-list--item"
+										data-name="khach-hang"
+										data-length="1"
+									>
+										Khách hàng
+									</li>
+								</ul>
+							</div>
+							<div class="about-meeyland__main--item -slide-box">
+								<div class="-slide">
+									<div class="swiper -infrastructure">
+										<div class="swiper-wrapper"></div>
+									</div>
+									<div class="-slide__navigation">
+										<div class="-slide__navigation--item -prev">
 											<img
-												data-src="./assets/image/co-so-ha-tang/a1.jpg"
-												class="swiper-lazy"
+												src="./assets/icon/arrow-about-meeyland.png"
+												alt="Arrow"
 											/>
-											<!-- Preloader image -->
-											<div
-												class="
-													swiper-lazy-preloader swiper-lazy-preloader-white
-												"
-											></div>
 										</div>
-										<div class="swiper-slide">
-											<!-- Required swiper-lazy class and image source specified in data-src attribute -->
+										<div class="-slide__navigation--item -next">
 											<img
-												data-src="./assets/image/co-so-ha-tang/a2.jpg"
-												class="swiper-lazy"
+												src="./assets/icon/arrow-about-meeyland.png"
+												alt="Arrow"
 											/>
-											<!-- Preloader image -->
-											<div
-												class="
-													swiper-lazy-preloader swiper-lazy-preloader-white
-												"
-											></div>
-										</div>
-										<div class="swiper-slide">
-											<!-- Required swiper-lazy class and image source specified in data-src attribute -->
-											<img
-												data-src="./assets/image/co-so-ha-tang/a3.jpg"
-												class="swiper-lazy"
-											/>
-											<!-- Preloader image -->
-											<div
-												class="
-													swiper-lazy-preloader swiper-lazy-preloader-white
-												"
-											></div>
-										</div>
-										<div class="swiper-slide">
-											<!-- Required swiper-lazy class and image source specified in data-src attribute -->
-											<img
-												data-src="./assets/image/co-so-ha-tang/a4.HEIC"
-												class="swiper-lazy"
-											/>
-											<!-- Preloader image -->
-											<div
-												class="
-													swiper-lazy-preloader swiper-lazy-preloader-white
-												"
-											></div>
-										</div>
-										<div class="swiper-slide">
-											<!-- Required swiper-lazy class and image source specified in data-src attribute -->
-											<img
-												data-src="./assets/image/co-so-ha-tang/a5.jpg"
-												class="swiper-lazy"
-											/>
-											<!-- Preloader image -->
-											<div
-												class="
-													swiper-lazy-preloader swiper-lazy-preloader-white
-												"
-											></div>
-										</div>
-										<div class="swiper-slide">
-											<!-- Required swiper-lazy class and image source specified in data-src attribute -->
-											<img
-												data-src="./assets/image/co-so-ha-tang/a6.jpg"
-												class="swiper-lazy"
-											/>
-											<!-- Preloader image -->
-											<div
-												class="
-													swiper-lazy-preloader swiper-lazy-preloader-white
-												"
-											></div>
-										</div>
-										<div class="swiper-slide">
-											<!-- Required swiper-lazy class and image source specified in data-src attribute -->
-											<img
-												data-src="./assets/image/co-so-ha-tang/a7.jpg"
-												class="swiper-lazy"
-											/>
-											<!-- Preloader image -->
-											<div
-												class="
-													swiper-lazy-preloader swiper-lazy-preloader-white
-												"
-											></div>
-										</div>
-										<div class="swiper-slide">
-											<!-- Required swiper-lazy class and image source specified in data-src attribute -->
-											<img
-												data-src="./assets/image/co-so-ha-tang/a8.jpg"
-												class="swiper-lazy"
-											/>
-											<!-- Preloader image -->
-											<div
-												class="
-													swiper-lazy-preloader swiper-lazy-preloader-white
-												"
-											></div>
-										</div>
-										<div class="swiper-slide">
-											<!-- Required swiper-lazy class and image source specified in data-src attribute -->
-											<img
-												data-src="./assets/image/co-so-ha-tang/a9.jpg"
-												class="swiper-lazy"
-											/>
-											<!-- Preloader image -->
-											<div
-												class="
-													swiper-lazy-preloader swiper-lazy-preloader-white
-												"
-											></div>
 										</div>
 									</div>
 								</div>
-								<div class="-slide__navigation">
-									<div class="-slide__navigation--item -prev">
+								<div class="-detail -nameSlide"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="development-roadmap" class="development-roadmap">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="development-roadmap__main">
+							<div class="development-roadmap__main--item -title">
+								<div class="-title__image">
+									<picture>
+										<source
+											srcset="./assets/image/development-roadmap-title1.png"
+											media="(min-width: 992px)"
+										/>
+										<source
+											srcset="./assets/image/development-roadmap-title1-mb.svg"
+										/>
 										<img
-											src="./assets/icon/arrow-about-meeyland.png"
-											alt="Arrow"
+											srcset="./assets/image/development-roadmap-title1-mb.svg"
+											alt="Roadmap"
+										/>
+									</picture>
+								</div>
+							</div>
+							<div class="development-roadmap__main--item -body">
+								<div class="-body--item">
+									<div class="-body__image">
+										<img src="./assets/icon/cotloi-icon.svg" alt="Cốt lõi" />
+									</div>
+									<p class="-body__content">Lấy công nghệ làm</p>
+									<h3>cốt lõi</h3>
+								</div>
+								<div class="-body--item">
+									<div class="-body__image">
+										<img
+											src="./assets/icon/duongloi-icon.svg"
+											alt="Đường lối"
 										/>
 									</div>
-									<div class="-slide__navigation--item -next">
+									<p class="-body__content">Lấy bất động sản làm</p>
+									<h3>đường lối</h3>
+								</div>
+								<div class="-body--item">
+									<div class="-body__image">
 										<img
-											src="./assets/icon/arrow-about-meeyland.png"
-											alt="Arrow"
+											src="./assets/icon/tiemnang-icon.svg"
+											alt="Tiềm năng"
 										/>
+									</div>
+									<p class="-body__content">Lấy tài chính làm</p>
+									<h3>tiềm năng</h3>
+								</div>
+								<div class="-body--item">
+									<div class="-body__image">
+										<img src="./assets/icon/muctieu-icon.svg" alt="Mục tiêu" />
+									</div>
+									<p class="-body__content">
+										Lấy khách hàng <br />
+										& Giá trị vốn hóa làm
+									</p>
+									<h3>mục tiêu</h3>
+								</div>
+								<div class="-body--item">
+									<div class="-body__image">
+										<img src="./assets/icon/global-icon.svg" alt="Toàn cầu" />
+									</div>
+									<p class="-body__content">Nhân bản chuyển giao mô hình ra</p>
+									<h3>toàn cầu</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-max">
+				<div class="row">
+					<div class="col">
+						<div class="development-roadmap__main">
+							<div class="development-roadmap__main--item -image">
+								<img
+									src="./assets/image/route-ladder.png"
+									alt="Router ladder"
+								/>
+							</div>
+							<div class="development-roadmap__main--item -body">
+								<div class="-body--item">
+									<div class="-body--item__title">
+										<img src="./assets/image/2019.svg" alt="2019" />
+									</div>
+									<div class="-body--item__content">
+										<p>
+											Hoàn thiện bộ máy tổ chức, hoàn thiện sản phẩm khởi động
+											chiến dịch truyền thông trên toàn lãnh thổ Việt Nam.
+										</p>
+									</div>
+								</div>
+								<div class="-body--item">
+									<div class="-body--item__title">
+										<img src="./assets/image/2020.svg" alt="2020" />
+									</div>
+									<div class="-body--item__content">
+										<p>
+											Đưa ứng dụng (APP) ra thị trường Việt Nam, khởi động hệ
+											thống kinh doanh để nhận về doanh thu lợi nhuận. Hoàn
+											thiện hồ sơ để trở thành công ty đại chúng.
+										</p>
+									</div>
+								</div>
+								<div class="-body--item">
+									<div class="-body--item__title">
+										<img src="./assets/image/2021.svg" alt="2021" />
+									</div>
+									<div class="-body--item__content">
+										<p>
+											Phát triển chi nhánh trên toàn lãnh thổ Việt Nam. Phát
+											triển sản phẩm cho thị trường Quốc tế. Đưa dần danh sách
+											cổ đông vào doanh nghiệp. Phát hành mã chứng khoán tại
+											Trung tâm lưu ký chứng khoán, sở giao dịch chứng khoán.
+										</p>
+									</div>
+								</div>
+								<div class="-body--item">
+									<div class="-body--item__title">
+										<img src="./assets/image/2021-2025.svg" alt="2021-2025" />
+									</div>
+									<div class="-body--item__content">
+										<p>
+											Chính thức đóng gói doanh nghiệp và nhân bản ra Toàn cầu.
+											Chính thức niêm yết chứng khoán sàn trong nước hoặc quốc
+											tế, mục tiêu cuối cùng là sàn Hong Kong.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container -product">
+				<div class="row">
+					<div class="col">
+						<div class="development-roadmap__main">
+							<div class="development-roadmap__main--item -title">
+								<div class="-title__image">
+									<picture>
+										<source
+											srcset="./assets/image/development-roadmap-title2.png"
+											media="(min-width: 992px)"
+										/>
+										<source
+											srcset="./assets/image/development-roadmap-title2-mb.png"
+										/>
+										<img
+											srcset="./assets/image/development-roadmap-title2-mb.png"
+											alt="Roadmap"
+										/>
+									</picture>
+								</div>
+							</div>
+							<div class="development-roadmap__main--item -body">
+								<div class="-body__image">
+									<img
+										src="./assets/image/development-roadmap-2.svg"
+										alt="Roadmap"
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="opportunity">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="opportunity__main">
+							<div class="opportunity__main--item -title">
+								<div class="-title__image">
+									<picture>
+										<source
+											srcset="./assets/image/opportunity-title.png"
+											media="(min-width: 992px)"
+										/>
+										<source srcset="./assets/image/opportunity-title-mb.png" />
+										<img
+											srcset="./assets/image/opportunity-title-mb.png"
+											alt="Cơ hội hợp tác"
+										/>
+									</picture>
+								</div>
+							</div>
+							<div class="opportunity__main--item -body">
+								<p>
+									Mục tiêu của của bản thân là tự do tài chính và có thể giúp đỡ
+									thật nhiều người có thể phát triển bản thân và tự do tài
+									chính. Tôi tự hào vì hiện tại mình đang đóng góp công sức chia
+									sẻ, lan tỏa một dự án mang tính nhân văn cao, mang giá trị lớn
+									cho xã hội và góp phần tôn vinh Trí Tuệ Việt. Meey Land với
+									khát vọng sẽ là niềm tự hào của dân tộc Việt. Tôi rất hân hạnh
+									được mang cơ hội hợp tác này đến với các bạn. Hãy liên hệ với
+									tôi nếu bạn quan tâm.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="why-opportunity">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="why-opportunity__main">
+							<div class="why-opportunity__main--item -head">
+								<div class="-head__title">
+									<h2 class="--hidden">Vì sao Meey Land lại là cơ hội lớn</h2>
+									<p class="-head__title--text -text--center">Vì sao</p>
+									<div class="-head__title--image">
+										<img
+											src="./assets/image/meeyland-text.png"
+											alt="Meey Land"
+										/>
+										<div class="question-mark">
+											<img
+												src="./assets/image/question-mark.svg"
+												alt="Question mark"
+											/>
+										</div>
+									</div>
+									<p class="-head__title--text -text--right">
+										lại là cơ hội lớn
+									</p>
+								</div>
+							</div>
+							<div class="why-opportunity__main--item -body">
+								<p>
+									Với một tầm nhìn chiến lược dài hạn, một bản kế hoạch hoàn
+									hảo, một đội ngũ nhân sự tài năng thì Meey Land có đủ thiên
+									thời địa lợi nhân hòa để thành công.
+								</p>
+								<p>
+									Một hệ sinh thái hoàn hảo xung quanh thực thể bất động sản tối
+									ưu và chuyên biệt đành riêng cho mọi người quan tâm về bất
+									động sản, chủ đầu tư, môi giới, người muốn bán nhà và mua nhà,
+									chủ nhà cho thuê và người thuê bất động sản …
+								</p>
+								<p>
+									Dự án Hệ sinh thái Công nghệ Bất động sản 4.0 sẽ thành công
+									rực rỡ bởi vì bản thân Meey Land không có đối thủ cạnh tranh
+									tại Việt Nam, không có đối thủ nào có thể cản bước chúng ta
+									thành công.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="why-opportunity__background-texture">
+							<img
+								src="./assets/image/logo-meeyland-pattern.png"
+								alt="Meey Land logo"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="benefit">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="benefit__main">
+							<div class="benefit__main--item -head">
+								<div class="-head__title">
+									<h2 class="--hidden">
+										Lợi ích khi đồng hành cùng doanh nhân Hoàng Mai Chung
+									</h2>
+									<p class="-head__title--text -text--center">
+										Lợi ích khi đồng hành cùng <br />
+										doanh nhân
+									</p>
+									<div class="-head__title--image">
+										<img
+											src="./assets/image/hoangmaichung-text.svg"
+											alt="Hoàng Mai Chung"
+										/>
+									</div>
+								</div>
+							</div>
+							<div class="benefit__main--item -body">
+								<div class="-body--item">
+									<div class="-body--item__image">
+										<img src="./assets/image/benefit1.png" alt="Benefit 1" />
+									</div>
+									<div class="-body--item__content">
+										<p>
+											Tôi trao CƠ HỘI HỢP TÁC và bạn muốn NẮM BẮT CƠ HỘI này để
+											trở thành đồng sở hữu doanh nghiệp Hệ sinh thái Công nghệ
+											Bất động sản.
+										</p>
+									</div>
+								</div>
+								<div class="-body--item">
+									<div class="-body--item__image">
+										<img src="./assets/image/benefit2.png" alt="Benefit 2" />
+									</div>
+									<div class="-body--item__content">
+										<p>
+											Chỉ với tối thiểu 1.165.000VND bạn đã có thể trở thành đối
+											tác của doanh nhân Hoàng Mai Chung, số tiền góp sẽ được
+											ghi nhận bằng MEY. Hãy liên hệ ngay với chúng tôi để hiểu
+											thêm giá trị của MEY và tôi chắc chắn rằng MEY sẽ là "thứ"
+											bạn mong muốn nắm bắt.
+										</p>
+									</div>
+								</div>
+								<div class="-body--item">
+									<div class="-body--item__image">
+										<img src="./assets/image/benefit3.png" alt="Benefit 3" />
+									</div>
+									<div class="-body--item__content">
+										<p>
+											Ngoài ra còn được nhận cực nhiều khóa học phát triển bản
+											thân, quản lý tài chính, các câu lạc bộ độc quyền và nhận
+											về cho mình những giá trị cực lớn khi đồng hành cùng chúng
+											tôi.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="benefit__main--item -footer">
+								<div class="-footer--item -head" onclick="togglePopup()">
+									<div class="-head--item">
+										<img src="./assets/icon/pointing.svg" alt="Pointing" />
+									</div>
+									<div class="-head--item">
+										<h3>
+											08 đặc quyền chỉ dành riêng cho Quý đối tác đồng hành cùng
+											doanh nhân Hoàng Mai Chung.
+										</h3>
+										<p>Click here >></p>
+									</div>
+								</div>
+								<div class="-footer--item -body">
+									<div class="-body--item">
+										<div
+											class="-body--item__image"
+											onclick="handleVideoIframe('https://www.youtube.com/embed/MHXufk_6Sic')"
+										>
+											<img
+												src="./assets/image/huong-dan-tao-tai-khoan.jpg"
+												alt="Hướng dẫn tạo tài khoản"
+											/>
+										</div>
+										<div class="-body--item__title">
+											<p>Hướng dẫn tạo tài khoản</p>
+										</div>
+									</div>
+									<div class="-body--item">
+										<div
+											class="-body--item__image"
+											onclick="handleVideoIframe('https://www.youtube.com/embed/gcAqvCViA_0')"
+										>
+											<img
+												src="./assets/image/huong-dan-nap-tien.png"
+												alt="Hướng dẫn nạp tiền"
+											/>
+										</div>
+										<div class="-body--item__title">
+											<p>Hướng dẫn nạp tiền</p>
+										</div>
+									</div>
+									<div class="-body--item">
+										<div
+											class="-body--item__image"
+											onclick="handleVideoIframe('https://www.youtube.com/embed/2S99EDVAV7k')"
+										>
+											<img
+												src="./assets/image/huong-dan-kich-hoat-goi.png"
+												alt="Hướng dẫn kích hoạt gói trả thẳng"
+											/>
+										</div>
+										<div class="-body--item__title">
+											<p>Hướng dẫn kích hoạt gói trả thẳng</p>
+										</div>
+									</div>
+									<div class="-body--item">
+										<div
+											class="-body--item__image"
+											onclick="handleVideoIframe('https://www.youtube.com/embed/C35xLUrGiq0')"
+										>
+											<img
+												src="./assets/image/hd-kyc.png"
+												alt="Hướng dẫn KYC tài khoản"
+											/>
+										</div>
+										<div class="-body--item__title">
+											<p>Hướng dẫn kích hoạt gói trả góp</p>
+										</div>
+									</div>
+									<div class="-body--item">
+										<div
+											class="-body--item__image"
+											onclick="handleVideoIframe('https://www.youtube.com/embed/umkOq3ipAuo')"
+										>
+											<img
+												src="./assets/image/hd-tragop.png"
+												alt="Hướng dẫn trả góp"
+											/>
+										</div>
+										<div class="-body--item__title">
+											<p>Hướng dẫn KYC</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-max">
+				<div class="row">
+					<div class="col">
+						<div class="eight-perks__main">
+							<img
+								src="./assets/image/LỢI-ÍCH-KHI-THAM-GIA-mb.png"
+								alt="LỢI-ÍCH-KHI-THAM-GIA"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="benefit-mobile">
+			<div class="container-max">
+				<div class="row">
+					<div class="col">
+						<div class="benefit-link-video -body">
+							<div class="swiper -benefit">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="-body--item">
+											<div
+												class="-body--item__image"
+												onclick="handleVideoIframe('https://www.youtube.com/embed/MHXufk_6Sic')"
+											>
+												<img
+													src="./assets/image/huong-dan-tao-tai-khoan.jpg"
+													alt="Hướng dẫn tạo tài khoản"
+												/>
+											</div>
+											<div class="-body--item__title">
+												<p>Hướng dẫn tạo tài khoản</p>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="-body--item">
+											<div
+												class="-body--item__image"
+												onclick="handleVideoIframe('https://www.youtube.com/embed/gcAqvCViA_0')"
+											>
+												<img
+													src="./assets/image/huong-dan-nap-tien.png"
+													alt="Hướng dẫn nạp tiền"
+												/>
+											</div>
+											<div class="-body--item__title">
+												<p>Hướng dẫn nạp tiền</p>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="-body--item">
+											<div
+												class="-body--item__image"
+												onclick="handleVideoIframe('https://www.youtube.com/embed/2S99EDVAV7k')"
+											>
+												<img
+													src="./assets/image/huong-dan-kich-hoat-goi.png"
+													alt="Hướng dẫn kích hoạt gói trả thẳng"
+												/>
+											</div>
+											<div class="-body--item__title">
+												<p>Hướng dẫn kích hoạt gói trả thẳng</p>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="-body--item">
+											<div
+												class="-body--item__image"
+												onclick="handleVideoIframe('https://www.youtube.com/embed/C35xLUrGiq0')"
+											>
+												<img
+													src="./assets/image/hd-kyc.png"
+													alt="Hướng dẫn KYC tài khoản"
+												/>
+											</div>
+											<div class="-body--item__title">
+												<p>Hướng dẫn kích hoạt gói trả góp</p>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="-body--item">
+											<div
+												class="-body--item__image"
+												onclick="handleVideoIframe('https://www.youtube.com/embed/umkOq3ipAuo')"
+											>
+												<img
+													src="./assets/image/hd-tragop.png"
+													alt="Hướng dẫn trả góp"
+												/>
+											</div>
+											<div class="-body--item__title">
+												<p>Hướng dẫn KYC</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-max">
+				<div class="row">
+					<div class="col">
+						<div class="benefit__video" data-index-video="0">
+							<iframe
+								src="https://www.youtube.com/embed/MHXufk_6Sic"
+								title="YouTube video player"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen
+							></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="companion" class="companion">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="companion__main">
+							<div class="companion__main--item -head">
+								<p>
+									Cơ hội tham gia <span>GÓP SỨC</span> cùng
+									<span>DOANH NHÂN HOÀNG MAI CHUNG</span>
+								</p>
+								<p>
+									Hãy hành động <span>NGAY BÂY GIỜ</span> bởi cơ hội giống như
+									bình minh, nếu bạn chờ quá lâu, bạn sẽ bỏ lỡ nó.
+								</p>
+							</div>
+							<div class="companion__main--item -btn">Đồng hành ngay</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="why">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="why__main">
+							<div class="why__main--item -head">
+								<div class="-head__title">
+									<h2 class="--hidden">Tại sao tham gia bây giờ lại có lợi</h2>
+									<div class="-head__title--image">
+										<picture>
+											<source
+												srcset="./assets/image/why-title.png"
+												media="(min-width: 992px)"
+											/>
+											<source srcset="./assets/image/why-title-mb.svg" />
+											<img
+												srcset="./assets/image/why-title-mb.svg"
+												alt="Tại sao tham gia bây giờ lại có lợi"
+											/>
+										</picture>
+									</div>
+									<div class="-head__title--btn">
+										<a href="#">
+											<div class="btn">
+												<div class="btn__icon">
+													<img src="./assets/icon/click.svg" alt="" />
+												</div>
+												<p>Tôi muốn tham gia</p>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="-head__description">
+									<p>
+										Đã có rất nhiều dự án Startup công nghệ phát triển thần tốc
+										và mang về lợi ích lớn cho người tham gia.
+									</p>
+									<p>
+										Lịch sử đã trôi qua, nhưng bạn vẫn có thể nắm bắt ngay cơ
+										hội lớn tại đây!
+									</p>
+								</div>
+							</div>
+							<div class="why__main--item -body">
+								<div class="-body--item">
+									<div class="-body--item__title">
+										Lịch sử cổ phần của một số tập đoàn
+									</div>
+									<div class="-body--item__content">
+										<div class="-body--item__content--item -image">
+											<img
+												src="./assets/image/lich-su-co-phan.png"
+												alt="Lịch sử cổ phần của 1 số tập đoàn"
+											/>
+										</div>
+									</div>
+								</div>
+								<div class="-body--item">
+									<div class="-body--item__title">
+										Phát triển lợi nhuận nhanh chóng
+									</div>
+									<div class="-body--item__content">
+										<div class="-body--item__content--item -text">
+											<p>
+												Hiện tại tham gia với chi phí thấp hơn nhiều lần so với
+												định giá thực tế và trong tương lai. Các khoản tham gia
+												của bạn sẽ có giá trị tăng lên theo từng giai đoạn phát
+												triển và bạn sớm nhận về giá trị khi trong tương lai
+												doanh nghiệp thành công. Giá trị tăng lên theo từng giai
+												đoạn và bạn có thể chốt lời ngay cả khi chưa IPO.
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="-body--item">
+									<div class="-body--item__title">
+										Góp phần xây dựng đất Nước
+									</div>
+									<div class="-body--item__content">
+										<div class="-body--item__content--item -image">
+											<p>
+												Khi góp phần vào việc hỗ trợ doanh nhân Hoàng Mai Chung,
+												bạn đang giúp đỡ cho việc phát triển một doanh nghiệp
+												startup Việt Nam vươn ra Thế giới. Hành động này không
+												chỉ đem lại lợi nhuận cho bản thân bạn, lợi ích cho xã
+												hội từ nghĩa vụ nộp thuế, tạo công ăn việc làm cho người
+												lao động mà còn là động lực cho các thế hệ startup tương
+												lai.
+											</p>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -505,6 +1791,548 @@
 				</div>
 			</div>
 		</section>
+		<section class="contact" id="contact">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="contact__main">
+							<div class="contact__main--item -info -title -xcore">
+								<div class="-title__content">
+									<p class="-title__content--position">Trợ lý Chủ tịch HĐQT</p>
+									<p class="-title__content--name">TRẦN VĂN TÙNG</p>
+									<div class="-title__content--contact">
+										<div class="-title__content--hyperlink">
+											<div class="-title__content--icon -zalo">
+												<a href="https://zalo.me/" target="_blank">
+													<img
+														src="./assets/icon/simple-icons_zalo2.svg"
+														alt="Zalo"
+													/>
+												</a>
+											</div>
+										</div>
+										<div class="-title__content--hyperlink">
+											<div class="-title__content--icon -facebook">
+												<a href="https://www.facebook.com/" target="_blank">
+													<img
+														src="./assets/icon/feather_facebook2.svg"
+														alt="Facebook"
+													/>
+												</a>
+											</div>
+										</div>
+										<div class="-title__content--hyperlink">
+											<div class="-title__content--icon -phone --disable">
+												<img
+													src="./assets/icon/bx_bx-phone-call2.svg"
+													alt="Phone call"
+												/>
+											</div>
+											<div class="-link">
+												<a href="tel:0943480909">
+													<p>0943 480 909</p>
+												</a>
+											</div>
+										</div>
+										<div class="-title__content--hyperlink">
+											<div class="-title__content--icon -mail">
+												<img
+													src="./assets/icon/bx_bx-mail-send2.svg"
+													alt="Mail"
+												/>
+											</div>
+											<div class="-link">
+												<a href="mailto:clairewill12@gmail.com">
+													<p>clairewill12@gmail.com</p>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="contact__main--item -contact-form">
+								<div class="-contact-form__title">
+									Bạn muốn tìm hiểu thêm về dự án Meey Land?
+								</div>
+								<p class="-contact-form__content">
+									Hãy để lại thông tin chúng tôi sẽ liên hệ tư vấn cho bạn!
+								</p>
+								<form action="">
+									<label for="contact-fullname">
+										HỌ VÀ TÊN: <span>*</span>
+									</label>
+									<input
+										type="text"
+										name="fullname"
+										id="contact-fullname"
+										placeholder="Nhập họ tên"
+									/>
+									<label for="contact-email">EMAIL: <span>*</span></label>
+									<input
+										type="text"
+										name="email"
+										id="contact-email"
+										placeholder="Nhập email"
+									/>
+									<label for="contact-phone">
+										SỐ ĐIỆN THOẠI: <span>*</span>
+									</label>
+									<input
+										type="text"
+										name="phone-number"
+										id="contact-phone"
+										placeholder="Nhập số điện thoại"
+									/>
+
+									<button type="submit">TƯ VẤN CHO TÔI</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="talk-about-us">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="talk-about-us__main -by-partner">
+							<div class="talk-about-us__main--item -head">
+								<div class="-head__title">
+									<p class="text-stroke">Đối tác</p>
+									<p>nói về chúng tôi</p>
+								</div>
+							</div>
+							<div class="talk-about-us__main--item -body">
+								<div class="swiper -by-partner__slide">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="swiper-slide__main">
+												<div class="-comma">
+													<img src="./assets/image/comma.png" alt="Comma" />
+												</div>
+												<p class="comment">
+													Đầu tư cổ phần doanh nghiệp trước IPO là sự lựa chọn
+													hàng đầu của tôi, với Meey Land: lộ trình rõ ràng,
+													pháp lý minh bạch, sản phẩm đi đúng xu thế thị trường.
+													Tôi tin rằng, thời gian tới doanh nghiệp sẽ phát triển
+													bùng nổ, vươn ra thị trường Quốc tế và mang lại nhiều
+													giá trị, lợi ích cho xã hội.
+												</p>
+												<div class="-info">
+													<div class="-info__image">
+														<img
+															src="./assets/image/doi-tac/Phạm Văn Tiến 1.jpg"
+															alt="Partner"
+														/>
+													</div>
+													<div class="-info__text">
+														<p class="-info__text--name">Phạm Văn Tiến</p>
+														<p class="-info__text--position">Nhà đầu tư</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="swiper-slide__main">
+												<div class="-comma">
+													<img src="./assets/image/comma.png" alt="Comma" />
+												</div>
+												<p class="comment">
+													Tôi xác định sẽ đồng hành đến cùng với anh Hoàng Mai
+													Chung và dự án Meey Land, tôi thấy được ở con người
+													này có cái TÂM rất sáng, và cũng một phần vì tôi tin
+													tưởng và ủng hộ TRÍ TUỆ VIỆT, không hề thua kém bất cứ
+													trí tuệ nào trên thế giới. Vì một Việt Nam hùng cường,
+													hãy cùng đưa con thuyền Meey Land ra biển lớn!
+												</p>
+												<div class="-info">
+													<div class="-info__image">
+														<img
+															src="./assets/image/doi-tac/Vi Thúy.jpg"
+															alt="Partner"
+														/>
+													</div>
+													<div class="-info__text">
+														<p class="-info__text--name">Vi Thúy</p>
+														<p class="-info__text--position">
+															Hoa hậu Doanh nhân duyên dáng Toàn Cầu
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="swiper-slide__main">
+												<div class="-comma">
+													<img src="./assets/image/comma.png" alt="Comma" />
+												</div>
+												<p class="comment">
+													Với mục tiêu, kế hoạch, chiến lược rõ ràng và nguồn
+													lực đủ khoẻ, tôi rất tin tưởng vào lộ trình niêm yết
+													sàn chứng khoán của Meey Land vào 2023
+												</p>
+												<div class="-info">
+													<div class="-info__image">
+														<img
+															src="./assets/image/doi-tac/Lường Thị Nhường.jpg"
+															alt="Partner"
+														/>
+													</div>
+													<div class="-info__text">
+														<p class="-info__text--name">Lương Thị Nhường</p>
+														<p class="-info__text--position">
+															Giám đốc Văn phòng Đại diện
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="swiper-slide__main">
+												<div class="-comma">
+													<img src="./assets/image/comma.png" alt="Comma" />
+												</div>
+												<p class="comment">
+													Hệ sinh Thái công nghệ bất động sản Meey Land sẽ làm
+													thay đổi thói quen mua bán bất động sản của khách hàng
+													trên toàn cầu và sẽ mang lại nguồn thu rất lớn cho
+													doanh nghiệp và đối tác trong tương lại gần. Tôi tin
+													rằng Meey Land sẽ đủ khả năng lên sàn Hong Kong.
+												</p>
+												<div class="-info">
+													<div class="-info__image">
+														<img
+															src="./assets/image/doi-tac/Phạm Ngọc Lượng.jpg"
+															alt="Partner"
+														/>
+													</div>
+													<div class="-info__text">
+														<p class="-info__text--name">Phạm Ngọc Lượng</p>
+														<p class="-info__text--position">
+															Phó Giám đốc Văn phòng Đại diện
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="swiper-slide__main">
+												<div class="-comma">
+													<img src="./assets/image/comma.png" alt="Comma" />
+												</div>
+												<p class="comment">
+													Đây thực sự là một dự án tuyệt vời. Tôi tin chắc rằng
+													với bộ máy nhân sự như hiện tại và sự dẫn dắt tài ba,
+													đầy tâm huyết của Chủ tịch Hoàng Mai Chung, dự án Hệ
+													sinh thái công nghệ Bất động sản Meey Land sẽ thành
+													công vang dội vươn tầm Thế giới.
+												</p>
+												<div class="-info">
+													<div class="-info__image">
+														<img
+															src="./assets/image/doi-tac/Nguyễn Thị Hồng Hạnh.jpg"
+															alt="Partner"
+														/>
+													</div>
+													<div class="-info__text">
+														<p class="-info__text--name">
+															Nguyễn Thị Hồng Hạnh
+														</p>
+														<p class="-info__text--position">
+															Giám đốc Đào tạo
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-pagination"></div>
+								</div>
+								<div class="navi">
+									<div class="-btn-prev">
+										<i class="fa-solid fa-chevron-left"></i>
+									</div>
+									<div class="-btn-next">
+										<i class="fa-solid fa-chevron-right"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="talk-about-us__main -by-newspapers">
+							<div class="talk-about-us__main--item -head">
+								<div class="-head__title">
+									<p class="text-stroke">Báo chí</p>
+									<p>nói về chúng tôi</p>
+								</div>
+							</div>
+							<div class="talk-about-us__main--item -body">
+								<div class="swiper -by-newspapers__slide">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="swiper-slide__main">
+												<div class="swiper-slide__main--item -image">
+													<a href=""
+														><img
+															src="./assets/image/bao/kenh 14.jpg"
+															alt="Kenh 14"
+													/></a>
+												</div>
+												<div class="swiper-slide__main--item -image">
+													<a href=""
+														><img
+															src="./assets/image/bao/dan tri.jpg"
+															alt="Kenh 14"
+													/></a>
+												</div>
+												<div class="swiper-slide__main--item -image">
+													<a href=""
+														><img
+															src="./assets/image/bao/24h.jpg"
+															alt="Kenh 14"
+													/></a>
+												</div>
+												<div class="swiper-slide__main--item -image">
+													<a href=""
+														><img
+															src="./assets/image/bao/soha.jpg"
+															alt="Kenh 14"
+													/></a>
+												</div>
+												<div class="swiper-slide__main--item -image">
+													<a href=""
+														><img
+															src="./assets/image/bao/eva.jpg"
+															alt="Kenh 14"
+													/></a>
+												</div>
+												<div class="swiper-slide__main--item -image">
+													<a href=""
+														><img
+															src="./assets/image/bao/phap luat net.jpg"
+															alt="Kenh 14"
+													/></a>
+												</div>
+												<div class="swiper-slide__main--item -image">
+													<a href=""
+														><img
+															src="./assets/image/bao/danviet.png"
+															alt="Kenh 14"
+													/></a>
+												</div>
+												<div class="swiper-slide__main--item -image">
+													<a href=""
+														><img
+															src="./assets/image/bao/vtc.jpg"
+															alt="Kenh 14"
+													/></a>
+												</div>
+												<div class="swiper-slide__main--item -image">
+													<a href=""
+														><img
+															src="./assets/image/bao/genk.jpg"
+															alt="Kenh 14"
+													/></a>
+												</div>
+												<div class="swiper-slide__main--item -image">
+													<a href="">
+														<img
+															src="./assets/image/bao/cafebiz.jpg"
+															alt="Kenh 14"
+													/></a>
+												</div>
+												<div class="swiper-slide__main--item -image">
+													<a href="">
+														<img
+															src="./assets/image/bao/bds vn.jpg"
+															alt="Kenh 14"
+													/></a>
+												</div>
+												<div class="swiper-slide__main--item -image">
+													<a href=""
+														><img
+															src="./assets/image/bao/doanh nhan thu do.jpg"
+															alt="Kenh 14"
+													/></a>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="swiper-slide__main">
+												<div class="swiper-slide__main--item -image">
+													<a href=""
+														><img
+															src="./assets/image/bao/doanh nghiep vn.jpg"
+															alt="Kenh 14"
+													/></a>
+												</div>
+												<div class="swiper-slide__main--item -image">
+													<a href=""
+														><img
+															src="./assets/image/bao/bds du lich.jpg"
+															alt="Kenh 14"
+													/></a>
+												</div>
+												<div class="swiper-slide__main--item -image">
+													<a href=""
+														><img
+															src="./assets/image/bao/dia oc phuong nam.jpg"
+															alt="Kenh 14"
+													/></a>
+												</div>
+												<div class="swiper-slide__main--item -image">
+													<a href=""
+														><img
+															src="./assets/image/bao/do thi moi.jpg"
+															alt="Kenh 14"
+													/></a>
+												</div>
+												<div class="swiper-slide__main--item -image">
+													<a href=""
+														><img
+															src="./assets/image/bao/moi truong và đô thị.jpg"
+															alt="Kenh 14"
+													/></a>
+												</div>
+												<div class="swiper-slide__main--item -image">
+													<a href=""
+														><img
+															src="./assets/image/bao/kinh te moi truong.jpg"
+															alt="Kenh 14"
+													/></a>
+												</div>
+												<div class="swiper-slide__main--item -image">
+													<a href=""
+														><img
+															src="./assets/image/bao/kinh te và do thi.jpg"
+															alt="Kenh 14"
+													/></a>
+												</div>
+												<div class="swiper-slide__main--item -image">
+													<a href=""
+														><img
+															src="./assets/image/bao/dau tu viet nam.jpg"
+															alt="Kenh 14"
+													/></a>
+												</div>
+												<div class="swiper-slide__main--item -image">
+													<a href=""
+														><img
+															src="./assets/image/bao/doanh nhân việt nam.jpg"
+															alt="Kenh 14"
+													/></a>
+												</div>
+												<div class="swiper-slide__main--item -image">
+													<a href="">
+														<img
+															src="./assets/image/bao/thuonghieucongluan.jpg"
+															alt="Kenh 14"
+													/></a>
+												</div>
+												<div class="swiper-slide__main--item -image">
+													<a href="">
+														<img
+															src="./assets/image/bao/gia dinh viet nam.jpg"
+															alt="Kenh 14"
+													/></a>
+												</div>
+												<div class="swiper-slide__main--item -image">
+													<a href=""
+														><img
+															src="./assets/image/bao/tai chinh doanh nghiep.jpg"
+															alt="Kenh 14"
+													/></a>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="swiper-slide__main">
+												<div class="swiper-slide__main--item -image">
+													<a href=""
+														><img
+															src="./assets/image/bao/tieu dung viet nam.jpg"
+															alt="Tiêu dùng Việt Nam"
+													/></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="footer__main">
+							<div class="footer__main--item -head">
+								<div class="-head__logo">
+									<img
+										src="./assets/image/logo-meeyland-footer.svg"
+										alt="Logo"
+									/>
+								</div>
+							</div>
+							<div class="footer__main--item -body">
+								<div class="-body--item -info">
+									<div class="-body--item__title">
+										Công ty Cổ phần Tập đoàn Meey Land
+									</div>
+									<div class="-body--item__content">
+										<p>
+											Tầng 5, Tòa nhà 97-99 Láng Hạ, phường Láng Hạ, quận Đống
+											Đa, T.P Hà Nội
+										</p>
+										<p>Số Giấy CNĐKKD: 0108867454</p>
+										<p>Nơi cấp: Sở kế hoạch và Đầu tư thành phố Hà Nội</p>
+									</div>
+									<div class="-body--item__content">
+										<p>
+											<span>
+												<img src="./assets/icon/phone-footer.svg" alt="Phone" />
+											</span>
+											Tel: 0249 999 2999
+										</p>
+										<p>
+											<span>
+												<img src="./assets/icon/mail-footer.svg" alt="Mail" />
+											</span>
+											Email: contact@meeyland.com
+										</p>
+									</div>
+								</div>
+								<div class="-body--item -info">
+									<div class="-body--item__title">
+										Dành cho đối tác, nhà đầu tư
+									</div>
+									<div class="-body--item__content">
+										<p>
+											<span>
+												<img src="./assets/icon/phone-footer.svg" alt="Phone" />
+											</span>
+											Tel: 1900 2323 16 hoặc (+84) 2444 55 22 66
+										</p>
+										<p>
+											<span>
+												<img src="./assets/icon/mail-footer.svg" alt="Mail" />
+											</span>
+											Email: contact@hoangmaichung.com
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
 		<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<script>
@@ -523,19 +2351,187 @@
 			let videoEcosystem = document.querySelector('#video-ecosystem');
 			for (let item of btnPlayVideoEcosystem) {
 				item.addEventListener('click', () => {
+					videoEcosystem.innerHTML = `
+						<div class="container">
+							<div class="row">
+								<div class="col">
+									<div class="video-ecosystem__main">
+										<iframe
+											class="video-ecosystem__main__iframe"
+											src="${item.getAttribute('data-src')}"
+											title="${item.getAttribute('data-title')}"
+											frameborder="0"
+											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+											allowfullscreen
+										></iframe>
+										<p>${item.getAttribute('data-title')}</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					`;
+					for (let item of videoEcosystemIframe) {
+						item.style.height = `${item.offsetWidth / (1112 / 625)}px`;
+					}
 					videoEcosystem.classList.toggle('active');
 					videoEcosystem.scrollIntoView(true);
 				});
 			}
+
+			let benefitVideoIframe = document.querySelector('.benefit__video iframe');
+			benefitVideoIframe.style.height = `${
+				benefitVideoIframe.offsetWidth / (560 / 315)
+			}px`;
+
+			function handleVideoIframe(link) {
+				benefitVideoIframe.setAttribute('src', link);
+				document.querySelector('.benefit__video').classList.toggle('active');
+			}
 		</script>
 		<script>
-			let aboutMeeylandSwiper = new Swiper('.-infrastructure', {
-				lazy: true, // Enable lazy loading
+			let aboutMeeylandSwiper;
+
+			let partnerTalk = new Swiper('.-by-partner__slide', {
+				slidesPerView: 1,
+				autoplay: {
+					delay: 2500,
+					disableOnInteraction: false
+				},
+				spaceBetween: 30,
 				navigation: {
-					nextEl: '.-next',
-					prevEl: '.-prev'
+					nextEl: '.-btn-next',
+					prevEl: '.-btn-prev'
+				},
+				pagination: {
+					el: '.swiper-pagination'
+				},
+				breakpoints: {
+					768: {
+						slidesPerView: 1,
+						spaceBetween: 20
+					},
+					1024: {
+						slidesPerView: 2,
+						spaceBetween: 40
+					}
 				}
 			});
+
+			let byNewspapersSlide = new Swiper('.-by-newspapers__slide', {
+				slidesPerView: 1,
+				spaceBetween: 30
+			});
+
+			let benefit = new Swiper('.-benefit', {
+				slidesPerView: 'auto',
+				spaceBetween: 30
+			});
+			let listChooseSlide = document.querySelectorAll(
+				'.about-meeyland__main .-list--item'
+			);
+			let infrastructure = document.querySelector('.-infrastructure');
+
+			let namePosition = [
+				'Hoàng Mai Chung - Chủ tịch Hội đồng quản trị',
+				'Ngô Mạnh Hà - Phó Tổng Giám đốc',
+				'Đỗ Thị Hường - Phó Tổng Giám đốc',
+				'Đặng Thu Hằng - Giám đốc Pháp chế và Quan hệ cổ đông',
+				'Nguyễn Thị Minh Gấm - Trưởng ban Kiểm soát'
+			];
+
+			function changeNameSlideItem(number) {
+				number = number < 1 ? 5 : number > 5 ? 1 : number;
+				let nameSlide = document.querySelectorAll('.-nameSlide');
+				for (const item of nameSlide) {
+					item.innerHTML = namePosition[number - 1];
+				}
+			}
+
+			for (const item of listChooseSlide) {
+				item.addEventListener('click', () => {
+					for (const item of listChooseSlide) {
+						item.classList.remove('active');
+					}
+
+					let dataNameSlide = item.getAttribute('data-name');
+					let dataLengthSlide = item.getAttribute('data-length');
+					let newData = '';
+
+					for (let i = 0; i < dataLengthSlide; i++) {
+						if (dataNameSlide == 'doi-ngu-dieu-hanh') {
+							newData += `
+							<div class="swiper-slide">
+								<img  src="./assets/image/${dataNameSlide}/a${i + 1}.jpg"
+											alt="${dataNameSlide}-${i + 1}"
+											loading="eager"
+											class="img-n"
+								/>
+								<div class="-detail -nameSlide"></div>
+							</div>`;
+						} else {
+							newData += `
+							<div class="swiper-slide">
+								<img  src="./assets/image/${dataNameSlide}/a${i + 1}.jpg"
+											class="swiper-lazy" alt="${dataNameSlide}-${i + 1}"
+											loading="eager"
+								/>
+							</div>`;
+						}
+					}
+					infrastructure.innerHTML = `<div class="swiper-wrapper">${newData}</div>`;
+					aboutMeeylandSwiper = new Swiper('.-infrastructure', {
+						loop: true,
+						navigation: {
+							nextEl: '.-next',
+							prevEl: '.-prev'
+						},
+						spaceBetween: 30,
+						initialSlide: 0
+					});
+					if (dataNameSlide === 'doi-ngu-dieu-hanh') {
+						for (const elm of document.querySelectorAll('.-nameSlide')) {
+							elm.innerHTML = namePosition[0];
+						}
+						aboutMeeylandSwiper.on('slideChange', () => {
+							changeNameSlideItem(aboutMeeylandSwiper.activeIndex);
+						});
+					} else {
+						for (const elm of document.querySelectorAll('.-nameSlide')) {
+							elm.innerHTML = '';
+						}
+					}
+
+					item.classList.add('active');
+				});
+			}
+			listChooseSlide[0].click();
+		</script>
+		<script>
+			function togglePopup() {
+				let media = window.matchMedia('(min-width: 992px)');
+				if (media.matches) {
+					let popup = document.getElementById('popup');
+					popup.classList.toggle('active');
+					document.body.classList.toggle('active');
+				} else {
+					document
+						.querySelector('.eight-perks__main')
+						.classList.toggle('active');
+				}
+			}
+
+			let partnerSlideText = document.querySelectorAll(
+				'.talk-about-us__main--item .swiper-slide__main .comment'
+			);
+			let maxHeightPartner = partnerSlideText[0].offsetHeight;
+			for (const item of partnerSlideText) {
+				if (item.offsetHeight > maxHeightPartner) {
+					maxHeightPartner = item.offsetHeight;
+				}
+			}
+			for (const item of partnerSlideText) {
+				item.style.height = `${maxHeightPartner}px`;
+			}
 		</script>
 	</body>
 </html>
