@@ -199,6 +199,25 @@ footer .background-texture img {
   text-decoration: none;
 }
 
+.contact .-title__content--hyperlink .-link a p,
+.header .-title__content--hyperlink .-link a p {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+@media only screen and (min-width: 992px) {
+  .contact .-title__content--hyperlink .-link a p,
+  .header .-title__content--hyperlink .-link a p {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
+  }
+}
+
 .contact .-title__content--icon,
 .header .-title__content--icon {
   margin-left: 12px;
@@ -338,15 +357,31 @@ footer .background-texture img {
   color: #ffffff;
   font-style: italic;
   font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+@media only screen and (min-width: 992px) {
+  .header__main .-title__content--position {
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
 
 .header__main .-title__content--name {
   color: #ffffff;
   font-style: normal;
   font-weight: bold;
-  font-size: 28px;
-  line-height: 33px;
+  font-size: 25px;
+  line-height: 30px;
   margin: 10px 0 5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .header__main .-title__content--name {
+    font-size: 28px;
+    line-height: 33px;
+  }
 }
 
 @media only screen and (min-width: 992px) {
