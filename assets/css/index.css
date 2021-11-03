@@ -259,6 +259,8 @@ footer .background-texture img {
 @media only screen and (min-width: 992px) {
   .header {
     background: url(../image/header-background.png) no-repeat;
+    background-position: top center;
+    background-size: cover;
     padding: 141px 0 0;
   }
 }
@@ -295,16 +297,25 @@ footer .background-texture img {
   display: flex;
   margin: 0 0 50px;
   position: relative;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
-      -ms-flex-flow: row-reverse;
-          flex-flow: row-reverse;
+      -ms-flex-flow: column-reverse;
+          flex-flow: column-reverse;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .header__main .-title {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: row-reverse;
+            flex-flow: row-reverse;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -330,7 +341,15 @@ footer .background-texture img {
   width: -moz-max-content;
   width: max-content;
   position: static;
-  margin-left: 19px;
+  margin-left: 0;
+  margin-top: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .header__main .-title__content {
+    margin-left: 19px;
+    margin-top: 0;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -338,17 +357,20 @@ footer .background-texture img {
     position: relative;
     max-width: calc(100% - 450px);
     right: 0;
+    margin-top: 0;
   }
 }
 
 @media only screen and (min-width: 1280px) {
   .header__main .-title__content {
+    margin-top: 0;
     max-width: calc(100% - 660px);
   }
 }
 
 @media only screen and (min-width: 1440px) {
   .header__main .-title__content {
+    margin-top: 0;
     right: -10%;
   }
 }
@@ -402,6 +424,14 @@ footer .background-texture img {
 @media only screen and (min-width: 1280px) {
   .header__main .-title__content--name {
     margin: 40px 0 2px;
+    font-size: 67px;
+    line-height: 78px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .header__main .-title__content--name {
+    margin: 40px 0 2px;
     font-size: 72px;
     line-height: 84px;
   }
@@ -442,7 +472,13 @@ footer .background-texture img {
 }
 
 .header__main .-title__content--hyperlink:not(:first-child) {
-  margin-top: 10px;
+  margin-top: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .header__main .-title__content--hyperlink:not(:first-child) {
+    margin-top: 10px;
+  }
 }
 
 @media only screen and (min-width: 992px) {
