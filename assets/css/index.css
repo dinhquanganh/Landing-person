@@ -1384,6 +1384,7 @@ footer .background-texture img {
 
 .chairperson__main .-title {
   display: none;
+  overflow: hidden;
 }
 
 @media only screen and (min-width: 992px) {
@@ -2515,7 +2516,6 @@ footer .background-texture img {
   font-size: 38px;
   line-height: 35px;
   color: #000000;
-  overflow-x: hidden;
 }
 
 @media only screen and (min-width: 992px) {

@@ -49,6 +49,7 @@
 
 		.-title {
 			display: none;
+			overflow: hidden;
 			@include Responsive(LG) {
 				display: block;
 			}
