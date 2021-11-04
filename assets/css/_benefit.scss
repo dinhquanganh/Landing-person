@@ -1,4 +1,6 @@
 .benefit {
+	overflow: hidden;
+
 	&__main {
 		display: flex;
 		flex-flow: column;
@@ -144,6 +146,7 @@
 			z-index: 3;
 			background: #f7f7f7;
 			border-radius: 50px;
+			overflow: hidden;
 
 			&--item {
 				width: 100%;

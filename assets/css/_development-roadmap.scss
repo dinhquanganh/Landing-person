@@ -1,5 +1,6 @@
 .development-roadmap {
 	background: #fff;
+	overflow: hidden;
 
 	.container {
 		&.-product {
@@ -56,6 +57,10 @@
 		@include Responsive(LG) {
 			padding: 0;
 			background: #fff;
+		}
+
+		.development-roadmap__main {
+			overflow: hidden;
 		}
 
 		.-body {

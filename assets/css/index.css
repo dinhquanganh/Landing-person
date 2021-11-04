@@ -1798,6 +1798,7 @@ footer .background-texture img {
 
 .development-roadmap {
   background: #fff;
+  overflow: hidden;
 }
 
 .development-roadmap .container.-product {
@@ -1876,6 +1877,10 @@ footer .background-texture img {
     padding: 0;
     background: #fff;
   }
+}
+
+.development-roadmap .container-max .development-roadmap__main {
+  overflow: hidden;
 }
 
 .development-roadmap .container-max .-body {
@@ -2574,6 +2579,10 @@ footer .background-texture img {
   width: 100%;
 }
 
+.benefit {
+  overflow: hidden;
+}
+
 .benefit__main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2775,6 +2784,7 @@ footer .background-texture img {
   z-index: 3;
   background: #f7f7f7;
   border-radius: 50px;
+  overflow: hidden;
 }
 
 .benefit__main .-footer--item {
@@ -3206,6 +3216,10 @@ footer .background-texture img {
 }
 
 .contact__main .-title__content--hyperlink .-link a {
+  color: #d0a452;
+}
+
+.contact__main .-title__content--hyperlink .-link a p {
   color: #d0a452;
 }
 
