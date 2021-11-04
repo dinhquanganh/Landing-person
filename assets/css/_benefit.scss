@@ -316,8 +316,11 @@
 			width: 100%;
 
 			&-slide {
-				width: 327px;
+				width: inherit;
 				padding-right: 26px;
+				@include Responsive(SM) {
+					width: 327px;
+				}
 
 				.-body--item {
 					width: 100%;

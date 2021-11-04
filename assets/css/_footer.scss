@@ -8,6 +8,13 @@ footer {
 		background-size: cover;
 	}
 
+	.container {
+		padding: 0 10px;
+		@include Responsive(LG) {
+			padding: 0;
+		}
+	}
+
 	.footer__main {
 		color: #fff;
 
@@ -17,6 +24,7 @@ footer {
 
 		.-head {
 			width: 275.75px;
+			max-width: 100%;
 			@include Responsive(LG) {
 				width: 233px;
 			}
@@ -102,6 +110,19 @@ footer {
 			line-height: 30px;
 			@include Responsive(LG) {
 				font-size: 18px;
+			}
+
+			a {
+				color: #ffffff;
+				font-size: 14px;
+				font-style: normal;
+				font-weight: normal;
+				line-height: 30px;
+				text-decoration: none;
+				margin: 0 3px;
+				@include Responsive(LG) {
+					font-size: 18px;
+				}
 			}
 
 			span {

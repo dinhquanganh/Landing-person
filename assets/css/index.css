@@ -2143,7 +2143,7 @@ footer .background-texture img {
 
 .development-roadmap__main .-body--item p {
   color: #000000;
-  font-size: 14px;
+  font-size: 13px;
   font-style: normal;
   font-weight: normal;
   line-height: 22px;
@@ -2160,7 +2160,7 @@ footer .background-texture img {
 
 .development-roadmap__main .-body--item h3 {
   color: #d0a452;
-  font-size: 24px;
+  font-size: 23px;
   font-style: normal;
   font-weight: bold;
   line-height: 24px;
@@ -2371,6 +2371,8 @@ footer .background-texture img {
      object-fit: contain;
   -o-object-position: center;
      object-position: center;
+  -webkit-animation: shadowll 2s linear infinite;
+          animation: shadowll 2s linear infinite;
 }
 
 .why__main .-head__title--btn .btn p {
@@ -2637,6 +2639,36 @@ footer .background-texture img {
 
 .why-opportunity__background-texture img {
   width: 100%;
+}
+
+@-webkit-keyframes shadowll {
+  0% {
+    -webkit-filter: drop-shadow(0 0 0 #fff);
+            filter: drop-shadow(0 0 0 #fff);
+  }
+  50% {
+    -webkit-filter: drop-shadow(0 0 30px #fff);
+            filter: drop-shadow(0 0 30px #fff);
+  }
+  100% {
+    -webkit-filter: drop-shadow(0 0 0 #fff);
+            filter: drop-shadow(0 0 0 #fff);
+  }
+}
+
+@keyframes shadowll {
+  0% {
+    -webkit-filter: drop-shadow(0 0 0 #fff);
+            filter: drop-shadow(0 0 0 #fff);
+  }
+  50% {
+    -webkit-filter: drop-shadow(0 0 30px #fff);
+            filter: drop-shadow(0 0 30px #fff);
+  }
+  100% {
+    -webkit-filter: drop-shadow(0 0 0 #fff);
+            filter: drop-shadow(0 0 0 #fff);
+  }
 }
 
 .benefit {
@@ -3063,8 +3095,14 @@ footer .background-texture img {
 }
 
 .benefit-mobile .benefit-link-video .swiper-slide {
-  width: 327px;
+  width: inherit;
   padding-right: 26px;
+}
+
+@media only screen and (min-width: 576px) {
+  .benefit-mobile .benefit-link-video .swiper-slide {
+    width: 327px;
+  }
 }
 
 .benefit-mobile .benefit-link-video .swiper-slide .-body--item {
@@ -3781,6 +3819,16 @@ footer {
   }
 }
 
+footer .container {
+  padding: 0 10px;
+}
+
+@media only screen and (min-width: 992px) {
+  footer .container {
+    padding: 0;
+  }
+}
+
 footer .footer__main {
   color: #fff;
 }
@@ -3791,6 +3839,7 @@ footer .footer__main--item {
 
 footer .footer__main .-head {
   width: 275.75px;
+  max-width: 100%;
 }
 
 @media only screen and (min-width: 992px) {
@@ -3912,6 +3961,22 @@ footer .footer__main p {
 
 @media only screen and (min-width: 992px) {
   footer .footer__main p {
+    font-size: 18px;
+  }
+}
+
+footer .footer__main p a {
+  color: #ffffff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 30px;
+  text-decoration: none;
+  margin: 0 3px;
+}
+
+@media only screen and (min-width: 992px) {
+  footer .footer__main p a {
     font-size: 18px;
   }
 }
