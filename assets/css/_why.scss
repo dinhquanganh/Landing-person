@@ -219,7 +219,6 @@
 	&__main {
 		max-width: none;
 		width: 100%;
-		overflow-x: hidden;
 		@include Responsive(LG) {
 			max-width: 645px;
 			width: 45%;
@@ -239,6 +238,7 @@
 					font-size: 38px;
 					line-height: 35px;
 					color: #000000;
+					overflow-x: hidden;
 
 					@include Responsive(LG) {
 						font-size: 65px;
