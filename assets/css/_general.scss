@@ -10,6 +10,9 @@ $LG: 992px;
 $XL: 1280px;
 $XXL: 1440px;
 
+$lower: 100;
+$upper: 700;
+
 // media queries
 @mixin Responsive($canvas) {
 	@if $canvas==SM {
@@ -110,6 +113,23 @@ footer {
 
 	&--justify {
 		text-align: justify;
+	}
+	&-waaaves {
+		font-variation-settings: 'wght' $lower;
+		span {
+			color: rgb(42, 65, 203);
+			animation: rise 2.25s infinite ease-in-out;
+			animation-delay: calc((var(--index) - 6) * 0.225s);
+			display: inline-block;
+			font-variation-settings: 'wght' $upper;
+		}
+	}
+}
+
+@keyframes rise {
+	50% {
+		color: rgb(255, 255, 255);
+		transform: translate(0, -10%);
 	}
 }
 

@@ -16,6 +16,10 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+		/>
 		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 		<link rel="stylesheet" href="./assets/css/index.css" />
 	</head>
@@ -1706,7 +1710,14 @@
 											08 đặc quyền chỉ dành riêng cho Quý đối tác đồng hành cùng
 											doanh nhân Hoàng Mai Chung.
 										</h3>
-										<p data-aos="fade-left" data-aos-duration="1000">
+										<p
+											class="
+												animate__animated animate__heartBeat animate__infinite
+											"
+											data-aos="fade-left"
+											data-aos-duration="1000"
+											style="width: max-content"
+										>
 											Click here >>
 										</p>
 									</div>
@@ -1925,7 +1936,11 @@
 									bình minh, nếu bạn chờ quá lâu, bạn sẽ bỏ lỡ nó.
 								</p>
 							</div>
-							<div class="companion__main--item -btn">Đồng hành ngay</div>
+							<div
+								class="companion__main--item -btn -text-waaaves"
+								id="waaaves-1"
+								data-waaaves="Đồng hành ngay"
+							></div>
 						</div>
 					</div>
 				</div>
@@ -2825,6 +2840,21 @@
 			}
 			for (const item of partnerSlideText) {
 				item.style.height = `${maxHeightPartner}px`;
+			}
+		</script>
+		<script>
+			let waaaves1 = document.querySelector('#waaaves-1');
+			waaavesArr = [];
+			waaavesArr = waaaves1.getAttribute('data-waaaves').split('');
+			console.log(waaavesArr);
+			let i = 0;
+			// add space in html
+			for (let item of waaavesArr) {
+				if (item == ' ') {
+					waaaves1.innerHTML += '&nbsp;';
+				} else {
+					waaaves1.innerHTML += `<span class="waaaves" style="--index: ${i++}">${item}</span>`;
+				}
 			}
 		</script>
 	</body>

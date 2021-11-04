@@ -94,6 +94,36 @@ footer .background-texture img {
   text-align: justify;
 }
 
+.-text-waaaves {
+  font-variation-settings: "wght" 100;
+}
+
+.-text-waaaves span {
+  color: #2a41cb;
+  -webkit-animation: rise 2.25s infinite ease-in-out;
+          animation: rise 2.25s infinite ease-in-out;
+  -webkit-animation-delay: calc((var(--index) - 6) * 0.225s);
+          animation-delay: calc((var(--index) - 6) * 0.225s);
+  display: inline-block;
+  font-variation-settings: "wght" 700;
+}
+
+@-webkit-keyframes rise {
+  50% {
+    color: white;
+    -webkit-transform: translate(0, -10%);
+            transform: translate(0, -10%);
+  }
+}
+
+@keyframes rise {
+  50% {
+    color: white;
+    -webkit-transform: translate(0, -10%);
+            transform: translate(0, -10%);
+  }
+}
+
 .absolute {
   position: absolute;
 }
