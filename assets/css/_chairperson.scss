@@ -2,6 +2,8 @@
 	background: none;
 	background-size: cover;
 	padding: 0;
+	position: relative;
+	z-index: 1;
 	@include Responsive(LG) {
 		background: url(../image/background-section5.png) no-repeat center;
 		padding: 110px 0 55px;

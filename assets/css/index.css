@@ -1107,6 +1107,8 @@ footer .background-texture img {
   background: url(../image/background-section4-mb.png) no-repeat bottom center;
   background-size: cover;
   padding: 26px 0 72px;
+  position: relative;
+  z-index: 2;
 }
 
 @media only screen and (min-width: 992px) {
@@ -1348,6 +1350,8 @@ footer .background-texture img {
   background: none;
   background-size: cover;
   padding: 0;
+  position: relative;
+  z-index: 1;
 }
 
 @media only screen and (min-width: 992px) {

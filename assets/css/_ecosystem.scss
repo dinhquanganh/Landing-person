@@ -294,6 +294,8 @@
 	background: url(../image/background-section4-mb.png) no-repeat bottom center;
 	background-size: cover;
 	padding: 26px 0 72px;
+	position: relative;
+	z-index: 2;
 	@include Responsive(LG) {
 		background: url(../image/background-section4.png) no-repeat left;
 		background-size: cover;
