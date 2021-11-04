@@ -184,12 +184,15 @@
 					font-family: 'Be Vietnam Pro', sans-serif;
 					font-style: normal;
 					font-weight: 500;
-					font-size: 18px;
+					font-size: 13px;
 					line-height: 21px;
 					text-transform: uppercase;
 					text-align: justify;
 					color: #ffffff;
 					margin-bottom: 4px;
+					@include Responsive(MD) {
+						font-size: 18px;
+					}
 					@include Responsive(LG) {
 						font-weight: bold;
 						line-height: 23px;

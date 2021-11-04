@@ -2,6 +2,7 @@
 	background: url(../image/business-opportunity-mb.png) no-repeat center;
 	background-size: cover;
 	padding: 54px 0 56px;
+	overflow: hidden;
 	@include Responsive(LG) {
 		background: url(../image/business-opportunity.png) no-repeat center;
 		padding: 21px 0 111px;

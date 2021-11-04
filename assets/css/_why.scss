@@ -280,6 +280,10 @@
 				line-height: 25px;
 				text-align: justify;
 				color: #323232;
+				padding: 0 15px;
+				@include Responsive(LG) {
+					padding: 0;
+				}
 
 				&:not(:first-child) {
 					margin-top: 10px;
