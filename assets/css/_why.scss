@@ -219,6 +219,7 @@
 	&__main {
 		max-width: none;
 		width: 100%;
+		overflow-x: hidden;
 		@include Responsive(LG) {
 			max-width: 645px;
 			width: 45%;

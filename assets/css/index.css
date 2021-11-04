@@ -729,6 +729,7 @@ footer .background-texture img {
   padding: 28px 16px 60px;
   position: relative;
   width: 100%;
+  overflow: hidden;
 }
 
 @media only screen and (min-width: 768px) {
@@ -970,6 +971,7 @@ footer .background-texture img {
   background: url(../image/background-section3.png) no-repeat center;
   background-size: cover;
   padding: 36px 0 47px;
+  overflow: hidden;
 }
 
 @media only screen and (min-width: 992px) {
@@ -2490,6 +2492,7 @@ footer .background-texture img {
 .why-opportunity__main {
   max-width: none;
   width: 100%;
+  overflow-x: hidden;
 }
 
 @media only screen and (min-width: 992px) {

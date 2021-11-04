@@ -21,6 +21,7 @@
 		padding: 28px 16px 60px;
 		position: relative;
 		width: 100%;
+		overflow: hidden;
 		@include Responsive(MD) {
 			padding: 28px 35px 60px;
 			max-width: 644px;
@@ -218,6 +219,7 @@
 	background: url(../image/background-section3.png) no-repeat center;
 	background-size: cover;
 	padding: 36px 0 47px;
+	overflow: hidden;
 	@include Responsive(LG) {
 		padding: 80px 67px;
 	}
