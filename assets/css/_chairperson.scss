@@ -4,6 +4,7 @@
 	padding: 0;
 	position: relative;
 	z-index: 1;
+	overflow: hidden;
 	@include Responsive(LG) {
 		background: url(../image/background-section5.png) no-repeat center;
 		padding: 110px 0 55px;
