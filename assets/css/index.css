@@ -1768,6 +1768,7 @@ footer .background-texture img {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 100%;
+  z-index: 99;
 }
 
 @media only screen and (min-width: 992px) {
@@ -2655,8 +2656,8 @@ footer .background-texture img {
   position: absolute;
   max-width: 100%;
   width: 95%;
-  top: 55%;
-  right: -2%;
+  top: 60%;
+  right: -3%;
 }
 
 @media only screen and (min-width: 992px) {

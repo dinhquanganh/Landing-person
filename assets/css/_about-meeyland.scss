@@ -212,6 +212,7 @@
 				top: 50%;
 				transform: translateY(-50%);
 				width: 100%;
+				z-index: 99;
 				@include Responsive(LG) {
 					display: flex;
 				}
