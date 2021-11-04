@@ -428,7 +428,7 @@
 				&:hover .tt-detail {
 					visibility: visible;
 					opacity: 1;
-					z-index: 2;
+					z-index: 99;
 				}
 
 				&:nth-child(2) {
