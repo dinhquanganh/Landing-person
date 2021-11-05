@@ -2807,6 +2807,10 @@
 					infrastructure.innerHTML = `<div class="swiper-wrapper">${newData}</div>`;
 					aboutMeeylandSwiper = new Swiper('.-infrastructure', {
 						loop: true,
+						autoplay: {
+							delay: 2500,
+							disableOnInteraction: false
+						},
 						navigation: {
 							nextEl: '.-next',
 							prevEl: '.-prev'
