@@ -49,6 +49,10 @@
 			@include Responsive(LG) {
 				margin-top: 32px;
 			}
+
+			p {
+				white-space: nowrap;
+			}
 		}
 	}
 }
