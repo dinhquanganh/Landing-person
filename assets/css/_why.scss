@@ -28,8 +28,32 @@
 				&--image {
 					width: 100%;
 
-					img {
+					&.-dk {
+						display: none;
+						@include Responsive(LG) {
+							display: block;
+						}
+					}
+
+					&.-mb {
+						display: block;
+						@include Responsive(LG) {
+							display: none;
+						}
+					}
+
+					img,
+					svg {
 						width: 100%;
+					}
+
+					#join-btn {
+						transition: all 0.3s ease-in-out;
+						transform-origin: center;
+						transform-box: fill-box;
+						&:hover {
+							transform: scale(1.1);
+						}
 					}
 				}
 

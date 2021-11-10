@@ -2318,8 +2318,42 @@ footer .background-texture img {
   width: 100%;
 }
 
-.why__main .-head__title--image img {
+.why__main .-head__title--image.-dk {
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .why__main .-head__title--image.-dk {
+    display: block;
+  }
+}
+
+.why__main .-head__title--image.-mb {
+  display: block;
+}
+
+@media only screen and (min-width: 992px) {
+  .why__main .-head__title--image.-mb {
+    display: none;
+  }
+}
+
+.why__main .-head__title--image img,
+.why__main .-head__title--image svg {
   width: 100%;
+}
+
+.why__main .-head__title--image #join-btn {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+.why__main .-head__title--image #join-btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .why__main .-head__title--btn {
@@ -3206,6 +3240,15 @@ footer .background-texture img {
 
 .companion__main .-btn p {
   white-space: nowrap;
+}
+
+.companion__main .-btn a {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
 }
 
 .contact {
